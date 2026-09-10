@@ -1,0 +1,58 @@
+@import './src/styles/vars';
+
+.ModalStyle {
+  background-color: $color-white-l1 !important;
+}
+
+.ModalSurvey {
+  width: 340px;
+  min-height: 300px;
+  background-color: $color-white-l1;
+
+  &__Header {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    color: $color-primary-l1;
+  }
+
+  &__Form {
+    & > * {
+      margin-bottom: 20px;
+    }
+  }
+
+  .SelectStyle {
+    .custom-select {
+      &__control {
+        border: 1px solid $color-background-l5 !important;
+      }
+    }
+  }
+
+  .InputStyle {
+    input {
+      background-color: $color-background-l8;
+    }
+  }
+
+  &__ButtonGroup {
+    margin-top: 60px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .ButtonCancel {
+      width: 120px;
+      background-color: $color-background-l7;
+      color: $color-secondary-l2;
+    }
+
+    .ButtonCreate {
+      width: 180px;
+    }
+  }
+}

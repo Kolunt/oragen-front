@@ -1,0 +1,81 @@
+@import './src/styles/vars';
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  height: 38px;
+  cursor: pointer;
+  &.gold {
+    color: $color-white-l1;
+    background-color: $color-accent-active;
+    &:hover {
+      background-color: $color-accent-hover;
+    }
+  }
+  &.grey-with-border {
+    border: 1px solid $color-background-l5;
+    background-color: $color-background-l7;
+    color: $color-tertiary-l3;
+    &:hover {
+      background-color: $color-background-l7;
+    }
+  }
+  &.gray {
+    background-color: $color-background-l7;
+    color: $color-tertiary-l3;
+    &:hover {
+      background-color: $color-background-l7;
+    }
+  }
+  &.transparent {
+    background-color: transparent;
+    color: $color-secondary-l2;
+    border: 1px solid $color-secondary-l2;
+    &:hover {
+      color: $color-accent-hover;
+      border: 1px solid $color-accent-hover;
+    }
+  }
+  &.accept {
+    background-color: $color-positive;
+  }
+  &.decline {
+    background-color: $color-negative;
+  }
+  &.max {
+    width: 236px;
+    min-width: 236px;
+  }
+  &.medium {
+    width: 103px;
+  }
+  &.min {
+    width: 123px;
+  }
+  &.min-square {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+  &.reset {
+    width: 100%;
+    background-color: $color-background-l7;
+    color: $color-tertiary-l3;
+    &:hover {
+      background-color: $color-background-l7;
+    }
+  }
+  &.cancel {
+    background-color: transparent;
+    color: $color-secondary-l2;
+    border: 1px solid $color-secondary-l2;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

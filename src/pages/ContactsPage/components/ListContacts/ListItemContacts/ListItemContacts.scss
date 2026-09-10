@@ -1,0 +1,36 @@
+@import '../../../../../styles/vars';
+
+.ListItemContacts {
+  padding: 12px 20px;
+  margin-bottom: 5px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 0.5fr 1.2fr auto;
+  background-color: $color-white-l1;
+  border-radius: 6px;
+  font-size: 10px;
+  line-height: 14px;
+  color: $color-primary-l1;
+  //cursor: pointer;
+
+  @media (max-width: 1200px) {
+    padding: 10px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .Cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-secondary-l2;
+    text-align: center;
+
+    .CustomIcon {
+      cursor: pointer;
+    }
+  }
+}

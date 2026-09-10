@@ -1,0 +1,54 @@
+@import './src/styles/vars';
+
+.VideoCallPage {
+  background-color: $color-background-l7;
+  position: relative;
+
+  .VideoChat {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 200px);
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1200px) {
+      height: 650px;
+    }
+
+    .ListChatterer {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      background-color: $color-background-l5;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+      grid-gap: 2rem;
+
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+
+      &--subscriber {
+        position: relative;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+  .Relative {
+    position: fixed;
+    top: 70px;
+    right: 10px;
+  }
+
+  .Relative2 {
+    position: fixed;
+    top: 70px;
+    right: 130px;
+    z-index: 99;
+  }
+}

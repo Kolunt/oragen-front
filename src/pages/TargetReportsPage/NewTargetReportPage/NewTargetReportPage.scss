@@ -1,0 +1,45 @@
+@import './src/styles/vars';
+
+.NewTargetReportPage {
+  background-color: $color-background-l7;
+
+  .SmallButton {
+    width: 120px;
+    padding: 5px 10px;
+  }
+
+  &__Report {
+    padding: 20px;
+    width: 100%;
+    background-color: $color-white-l1;
+    border: 1px solid $color-background-l9;
+    border-radius: 10px;
+
+    .Title {
+      margin-bottom: 20px;
+      width: 100%;
+
+      label {
+        font-size: 12px;
+      }
+
+      input {
+        padding: 7px 16px;
+        //background-color: $color-background-l7;
+        color: $color-black-l2;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    }
+
+    .CustomIconButton {
+      margin-top: 20px;
+    }
+
+    .icon-delete-report {
+      top: 10px;
+      right: 10px;
+    }
+  }
+}

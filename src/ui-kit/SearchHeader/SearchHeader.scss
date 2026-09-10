@@ -1,0 +1,86 @@
+@import './src/styles/vars';
+
+$height: 32px;
+$maxWidth: 620px;
+
+.Search {
+  $this: &;
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: $maxWidth;
+  width: 100%;
+  background-color: transparent;
+
+  &#{$this}__active {
+    #{$this}-Input {
+      background-color: transparent;
+    }
+  }
+
+  &__active {
+    #{$this}-InputWrapper {
+      //border: 1px solid red;
+      //box-shadow: 0 4px 8px rgba(176, 151, 106, 0.25);
+    }
+
+    #{$this}-Input {
+      background-color: white;
+    }
+  }
+
+  &-Form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  &-InputWrapper {
+    padding: 9px 12px 9px 36px;
+    width: 100%;
+    height: $height;
+    background-color: $color-background-l7;
+    //border: 1px solid rgba(224, 224, 224, 1);
+    transition: all 0.15s;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+  }
+
+  &-Input {
+    font-size: 10px;
+    line-height: 14px;
+    margin: 0;
+    min-width: 148px;
+    height: $height;
+    color: $color-primary-l1;
+    background-color: transparent;
+    border: none;
+    outline: transparent;
+    transition: all 0.15s;
+
+    &:focus {
+      min-width: 212px;
+
+      @media (max-width: 550px) {
+        min-width: auto;
+      }
+    }
+
+    &::placeholder {
+      color: $color-tertiary-l3;
+    }
+  }
+
+  &-Icon {
+    position: absolute;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+
+    svg {
+      fill: #f8f8f8;
+    }
+  }
+}

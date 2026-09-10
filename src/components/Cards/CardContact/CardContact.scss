@@ -1,0 +1,239 @@
+@import './src/styles/vars';
+
+.CardContact {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 482px;
+  height: 684px;
+  border-radius: 16px;
+  background-color: $color-white-l1;
+  background-image: url('../../../assets/img/cards/BG-Card.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  .IconWrapper {
+    position: absolute;
+    content: '';
+    top: 8px;
+    right: 8px;
+    width: 26px;
+    height: 26px;
+    background-color: $color-white-l1;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__Title {
+    margin: 40px auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .AvatarWrapper {
+      margin-bottom: 20px;
+
+      .Avatar {
+        width: 146px;
+        height: 146px;
+        background-color: $color-background-l5;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__Position {
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $color-tertiary-l3;
+  }
+
+  &__Name {
+    max-width: 200px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    color: $color-primary-l1;
+    text-align: center;
+  }
+
+  &__Company {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $color-accent-primary;
+  }
+
+  .CustomTabs {
+    margin-bottom: 26px;
+    padding: 0px 30px;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 11px;
+    background-color: $color-white-l1;
+    color: $color-medium-l4;
+
+    .Tab {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      border-radius: 0px;
+
+      &:hover {
+        color: $color-accent-primary;
+      }
+
+      &:after {
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $color-accent-primary;
+        content: '';
+        transform: scale(0);
+        transition: transform 0.3s cubic-bezier(0.11, 0.7, 0, 1);
+      }
+
+      &:hover:after {
+        transform: scale(1);
+      }
+    }
+
+    .Tab__selected {
+      color: $color-accent-primary;
+
+      &:after {
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $color-accent-primary;
+        content: '';
+        transform: scale(1);
+        transition: transform 0.3s cubic-bezier(0.11, 0.7, 0, 1);
+      }
+    }
+  }
+
+  .CardInner {
+    padding: 0px 30px;
+
+    .ProfileList {
+      &__Item {
+        margin-bottom: 10px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 0px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        span {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 16px;
+          color: $color-black-l2;
+        }
+
+        .Title {
+          color: $color-tertiary-l3;
+        }
+
+        .Link {
+          color: $color-link-l1;
+        }
+      }
+    }
+
+    .HistoryList {
+      padding: 0;
+      height: 240px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $color-grey-l6;
+        border-radius: 5rem;
+      }
+
+      &__Item {
+        width: 412px;
+        position: relative;
+        margin-bottom: 5px;
+        padding: 13px 20px;
+        background-color: $color-background-l8;
+        border-radius: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .IconWrapper {
+          position: absolute;
+          content: '';
+          top: 18px;
+          right: 10px;
+          background-color: transparent;
+
+          svg {
+            fill: $color-tertiary-l3;
+          }
+        }
+
+        .Info {
+          &__Title {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 16px;
+            color: $color-primary-l1;
+          }
+
+          &__Date {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            color: $color-secondary-l2;
+          }
+        }
+      }
+    }
+  }
+
+  &__Buttons {
+    margin-top: auto;
+    //margin-bottom: 30px;
+    padding: 14px 30px 30px 30px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: 200px;
+    }
+
+    .ButtonVideo {
+      background-color: $color-background-l7;
+      color: $color-tertiary-l3;
+    }
+  }
+}

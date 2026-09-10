@@ -1,0 +1,78 @@
+@import '../../../../styles/vars';
+
+.TextChat {
+  width: 100%;
+  max-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $color-white-l1;
+  visibility: hidden;
+  transition: all 0.2s linear;
+
+  &--active {
+    max-width: 250px;
+    visibility: visible;
+  }
+
+  &--fullscreen {
+    position: absolute;
+    top: 230px;
+    right: 5px;
+    width: 200px;
+    height: auto;
+    z-index: 10;
+  }
+
+  &__Messages {
+    padding: 10px;
+
+    .Title {
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 10px;
+      text-align: center;
+      color: $color-tertiary-l3;
+    }
+
+    .Messages {
+      overflow-y: auto;
+    }
+
+    .Message {
+      margin-bottom: 10px;
+      font-size: 12px;
+      color: $color-primary-l1;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &__Date {
+        display: block;
+      }
+
+      &__User {
+        margin-right: 5px;
+        font-weight: 600;
+      }
+
+      &__Text {
+        font-style: italic;
+      }
+    }
+  }
+
+  &--fullscreen &__Messages {
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+  }
+
+  &__InputField {
+    padding: 5px;
+    background-color: $color-tertiary-l3;
+  }
+}

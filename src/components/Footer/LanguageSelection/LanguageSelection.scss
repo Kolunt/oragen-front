@@ -1,0 +1,21 @@
+@import '../../../styles/vars';
+
+.LanguageSelection {
+  min-width: 100px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  line-height: 14px;
+  color: $color-tertiary-l3;
+  background-color: $color-background-l7;
+  border-radius: 10px;
+
+  @media (max-width: 550px) {
+    margin-bottom: 10px;
+  }
+
+  &__wrapper {
+    margin-right: 6px;
+  }
+}

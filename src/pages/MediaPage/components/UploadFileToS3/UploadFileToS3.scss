@@ -1,0 +1,79 @@
+@import './src/styles/vars';
+
+.UploadFileToS3 {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+
+  .input-file {
+    position: relative;
+    display: inline-block;
+  }
+  .input-file span {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    font-size: 12px;
+    vertical-align: middle;
+    color: rgb(255 255 255);
+    text-align: center;
+    border-radius: 4px;
+    background-color: $color-secondary-l2;
+    //line-height: 25px;
+    height: 25px;
+    padding: 3px 20px;
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    transition: background-color 0.2s;
+  }
+  .input-file input[type='file'] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+  }
+
+  /* Focus */
+  .input-file input[type='file']:focus + span {
+    //box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  }
+
+  /* Hover/active */
+  .input-file:hover span {
+    background-color: $color-secondary-l2;
+  }
+  .input-file:active span {
+    background-color: $color-secondary-l2;
+  }
+
+  /* Disabled */
+  .input-file input[type='file']:disabled + span {
+    background-color: #eee;
+  }
+
+  .btn {
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    font-size: 12px;
+    vertical-align: middle;
+    color: rgb(255 255 255);
+    text-align: center;
+    border-radius: 4px;
+    background-color: $color-accent-primary;
+    height: 25px;
+    padding: 3px 20px;
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+
+    &:disabled {
+      background-color: $color-tertiary-l3;
+    }
+  }
+}

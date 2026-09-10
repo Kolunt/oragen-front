@@ -1,0 +1,78 @@
+@import './src/styles/vars';
+
+.Accordion {
+  $this: &;
+  //margin-top: 50px;
+  box-shadow: none;
+
+  &-Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+    padding: 0px 16px;
+    color: $color-primary-l1;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    border-radius: 6px;
+    background-color: $color-white-l1;
+    border-bottom: 1px solid $color-grey-l2;
+    transition: all 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-white-l1;
+      //box-shadow: $shadow-bottom;
+    }
+    &:last-child {
+      margin-top: 0;
+    }
+
+    &Title {
+      span {
+        color: $color-tertiary-l3;
+      }
+    }
+
+    &Icon {
+      svg {
+        transition: all 0.3s ease;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &-Content {
+    //padding: 15px 0;
+    overflow: hidden;
+    color: black;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+    transition: all 0.3s;
+  }
+
+  &-HeaderIcon {
+    svg * {
+      width: 20px;
+      fill: $color-secondary-l2;
+    }
+  }
+
+  //&#{$this}__active {
+  //  #{$this}-HeaderIcon {
+  //    svg {
+  //      transform: rotate(180deg);
+  //    }
+  //  }
+  //}
+
+  &#{$this}__active {
+    #{$this}-Header {
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+}

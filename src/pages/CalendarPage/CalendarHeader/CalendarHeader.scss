@@ -1,0 +1,73 @@
+@import './src/styles/vars';
+
+.CalendarHeader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  //width: 70%;
+  //margin-right: 5px;
+
+  &__LeftBlock {
+    display: flex;
+
+    &_title {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18.75px;
+      line-height: 26px;
+      margin-right: 10px;
+      align-self: center;
+    }
+
+    &_select {
+      margin: 8px 2px;
+      padding: 0;
+      border: 0.625px solid $color-accent-active;
+      border-radius: 6px;
+      z-index: 20;
+
+      & .css-13cymwt-control {
+        min-height: 36px;
+      }
+
+      & .css-t3ipsp-control {
+        min-height: 36px;
+      }
+    }
+  }
+
+  &__RightBlock {
+    display: flex;
+    justify-content: center;
+
+    &_search {
+      align-self: center;
+      margin-right: 10px;
+
+      & .SearchForm-InputWrapper {
+        height: 27px;
+      }
+    }
+
+    & .Button {
+      padding: 5px 10px;
+    }
+
+    //&_button {
+    //  position: relative;
+    //  min-width: 150px;
+    //
+    //  & label {
+    //    display: inline-block;
+    //    padding-bottom: 0;
+    //    margin-right: 3px;
+    //    cursor: pointer;
+    //  }
+    //
+    //  & img {
+    //    position: absolute;
+    //    top: 7px;
+    //  }
+    //}
+  }
+}

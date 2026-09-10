@@ -1,0 +1,30 @@
+@import '../../../../../styles/vars';
+
+.ListContactsSorting {
+  margin-bottom: 10px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 0.5fr 1.2fr 22px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+  color: $color-secondary-l2;
+
+  @media (max-width: 1200px) {
+    padding: 0 10px;
+  }
+
+  &__Item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__Item--Start {
+    justify-content: start;
+  }
+
+  span {
+    margin-right: 5px;
+  }
+}

@@ -1,0 +1,22 @@
+@import './src/styles/vars';
+
+.Folder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  .Title {
+    width: 80px;
+    margin-top: 5px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-primary-l1;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

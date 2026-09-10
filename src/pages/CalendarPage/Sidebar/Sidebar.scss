@@ -1,0 +1,67 @@
+@import './src/styles/vars';
+
+.Sidebar {
+  min-width: 200px;
+  width: 200px;
+  padding: 0 10px;
+  background: $color-background-l8;
+  border-right: 0.625px solid $color-grey-l4;
+  font-size: 13px;
+
+  &__Title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 17.5px 0 5px 0;
+    img {
+      width: 11.25px;
+      height: 11.25px;
+      margin-top: 2px;
+    }
+
+    h5 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      color: $color-black-l2;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__Content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    margin-top: 8px;
+    padding: 0;
+
+    &_Title {
+      line-height: 12px;
+    }
+
+    li::before {
+      content: '\2022';
+      font-weight: bold;
+    }
+
+    &_Time {
+      position: absolute;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 12px;
+      right: 0;
+    }
+  }
+
+  &__Search {
+    margin-top: 5px;
+  }
+
+  & .SelectForm {
+    padding-top: 10px;
+  }
+}

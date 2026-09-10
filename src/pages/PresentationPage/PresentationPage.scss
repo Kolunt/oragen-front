@@ -1,0 +1,85 @@
+@import './src/styles/vars';
+
+.PresentationPage {
+  background-color: $color-background-l7;
+
+  &__Content {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: space-around;
+
+    .Presentation {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0 10px;
+      padding: 20px;
+      background-color: $color-white-l1;
+      border-radius: 10px;
+      overflow: hidden;
+
+      &__Notes {
+        width: 210px;
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .Info {
+          width: 100%;
+          padding: 10px;
+          background-color: $color-background-l8;
+          border-radius: 6px;
+
+          .Title {
+            margin-bottom: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 16px;
+            color: $color-secondary-l2;
+          }
+
+          .File {
+            padding: 8px;
+            margin-bottom: 8px;
+            background-color: $color-white-l1;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 17px;
+            color: $color-black-l2;
+            border-radius: 6px;
+            cursor: pointer;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            transition: all 0.2s;
+
+            &:hover {
+              color: $color-white-l1;
+              background-color: $color-accent-primary;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .ButtonFinish {
+          width: 123px;
+          height: 36px;
+          margin: 0 auto;
+          background-color: transparent;
+          border: 1px solid $color-negative;
+          border-radius: 6px;
+          color: $color-negative;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: -0.03em;
+        }
+      }
+    }
+  }
+}

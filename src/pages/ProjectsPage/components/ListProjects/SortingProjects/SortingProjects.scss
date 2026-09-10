@@ -1,0 +1,36 @@
+@import './src/styles/vars';
+
+.SortingProjects {
+  margin-bottom: 14px;
+  padding: 0 12px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 120px;
+  gap: 0 10px;
+  align-items: center;
+  background-color: transparent;
+
+  &__Item {
+    display: flex;
+    align-items: center;
+    color: $color-secondary-l2;
+
+    span {
+      margin-right: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+    }
+
+    .CustomIcon {
+      width: 8px;
+      height: 4px;
+      path {
+        fill: $color-secondary-l2;
+      }
+    }
+  }
+
+  &__Item--end {
+    justify-content: end;
+  }
+}

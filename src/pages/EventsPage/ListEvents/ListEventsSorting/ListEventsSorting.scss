@@ -1,0 +1,25 @@
+@import './src/styles/vars';
+
+.ListEventsSorting {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 0.5fr 1fr 1.75fr 1.75fr 0.5fr 0.5fr;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+  color: $color-secondary-l2;
+
+  @media (max-width: 1200px) {
+    padding: 0 10px;
+  }
+
+  &__Item {
+    text-align: center;
+  }
+
+  span {
+    margin-right: 5px;
+  }
+}

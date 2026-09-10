@@ -1,0 +1,14 @@
+@import '../../../styles/vars';
+
+.icon-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  top: -5px;
+  bottom: 0;
+  display: flex;
+
+  svg * {
+    fill: $color-black-l2;
+  }
+}

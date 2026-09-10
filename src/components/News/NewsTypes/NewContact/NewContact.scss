@@ -1,0 +1,126 @@
+@import './src/styles/vars';
+
+.NewContact {
+  margin-bottom: 10px;
+  padding: 20px;
+  background-color: $color-white-l1;
+  border-radius: 6px;
+
+  &__Header {
+    margin-bottom: 20px;
+
+    @media (max-width: 1300px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 440px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .Info {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 1300px) {
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 1400px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .Avatar {
+        margin-right: 16px;
+        width: 30px;
+        height: 32px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-background-l5;
+        cursor: pointer;
+
+        @media (max-width: 1400px) {
+          margin: 0 0 10px 0;
+        }
+      }
+
+      &__Name {
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 16px;
+        color: $color-primary-l1;
+        //display: grid;
+        //grid-template-columns: 1fr 110px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+
+        @media (max-width: 1100px) {
+          margin-bottom: 10px;
+        }
+
+        @media (max-width: 440px) {
+          margin-bottom: 10px;
+        }
+
+        span {
+          width: 110px;
+          position: relative;
+          &:before {
+            content: '';
+            width: 1px;
+            height: 16px;
+            background: $color-primary-l1;
+            display: block;
+            left: 0;
+            position: absolute;
+          }
+        }
+      }
+    }
+
+    .TimeWrapper {
+      .Time {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        color: $color-tertiary-l3;
+      }
+    }
+  }
+
+  .InfoList {
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    @media (max-width: 1400px) {
+      padding-left: 15px;
+    }
+
+    &__Item {
+      margin-bottom: 10px;
+      list-style: disc;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $color-primary-l1;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-all;
+      line-break: auto;
+      hyphens: manual;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

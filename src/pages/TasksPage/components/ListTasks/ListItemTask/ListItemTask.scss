@@ -1,0 +1,63 @@
+@import './src/styles/vars';
+
+.ListItemTask {
+  padding: 12px;
+  margin-bottom: 2px;
+  display: grid;
+  grid-template-columns: 1.5fr 130px 130px 130px 1fr 120px;
+  gap: 0 10px;
+  background-color: $color-white-l1;
+  border-radius: 6px;
+  align-items: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .Cell {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+    color: $color-date-picker;
+
+    .Title {
+      margin-bottom: 4px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .SubTitle {
+      font-size: 12px;
+      line-height: 19px;
+      color: $color-secondary-l2;
+    }
+
+    .Date {
+      padding-top: 4px;
+      display: flex;
+      align-items: center;
+      gap: 0 5px;
+    }
+
+    .AuthorBlock {
+      display: flex;
+      align-items: center;
+      gap: 0 8px;
+    }
+
+    .Author {
+      color: $color-text-link;
+      cursor: pointer;
+    }
+
+    .CustomAvatarSmall {
+      width: 24px;
+      height: 24px;
+    }
+
+    .CreationDate {
+      display: inline-block;
+      padding-top: 4px;
+    }
+  }
+}

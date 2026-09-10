@@ -1,0 +1,123 @@
+@import './src/styles/vars';
+
+.TasksPage {
+  background-color: $color-background-l7;
+
+  &__Header {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: end;
+
+    .TasksCount {
+      margin-left: 14px;
+      padding-bottom: 3px;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 18px;
+      color: $color-secondary-l2;
+    }
+
+    .CustomButtonAdd {
+      margin-left: 14px;
+    }
+  }
+
+  .FilterTasks {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 20px;
+
+    .CustomSearchForm {
+      background-color: $color-white-l1;
+      border-radius: 10px;
+      border: none;
+      -webkit-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+      -moz-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+      box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+
+      .SearchForm-InputWrapper {
+        height: 40px;
+      }
+
+      .SearchForm-Input {
+        font-size: 13px;
+        line-height: 18px;
+      }
+    }
+
+    .CustomTab {
+      height: 40px;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+      justify-content: space-between;
+
+      .Tab {
+        padding: 7px;
+      }
+
+      .TabLabel {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .Pagination {
+    margin-top: 20px;
+    display: flex;
+    align-items: end;
+
+    .CustomSelect {
+      margin-left: 10px;
+      padding-top: 0;
+
+      .custom-select {
+        &__control {
+          height: 28px !important;
+          min-height: auto !important;
+          font-size: 12px !important;
+          background-color: transparent !important;
+          border: 1px solid $color-secondary-l2 !important;
+          border-radius: 6px !important;
+          box-shadow: none !important;
+          cursor: pointer !important;
+
+          .custom-select__value-container {
+            height: 100% !important;
+            padding: 0 8px !important;
+          }
+
+          .custom-select__single-value {
+            color: $color-secondary-l2 !important;
+            margin: 0 !important;
+          }
+
+          .custom-select__input-container {
+            padding: 0 !important;
+          }
+
+          .custom-select__indicators {
+            height: 100% !important;
+
+            svg {
+              color: $color-secondary-l2;
+            }
+
+            .custom-select__indicator {
+              padding: 0 6px 0 0 !important;
+            }
+          }
+        }
+
+        &__menu {
+          padding: 5px !important;
+          border: none !important;
+          z-index: 5 !important;
+        }
+      }
+    }
+  }
+}

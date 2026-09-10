@@ -1,0 +1,44 @@
+@import './src/styles/vars';
+
+.Form {
+  margin-bottom: 20px;
+  max-width: 290px;
+  padding: 20px 26px;
+  background-color: $color-background-l8;
+  border-radius: 10px;
+
+  @media (max-width: 1200px) {
+    max-width: 100%;
+    padding: 5px 10px 10px 10px;
+  }
+  & > * {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .IconResetWrapper {
+    margin: 0 0 3px 10px;
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: $color-accent-primary;
+    border-radius: 50%;
+    min-width: 30px;
+
+    //@media (max-width: 1200px) {
+    //  display: flex;
+    //  justify-content: center;
+    //  align-items: center;
+    //}
+  }
+}
+
+.ButtonReset {
+  background-color: $color-background-l7;
+  color: $color-tertiary-l3;
+  //@media (max-width: 1200px) {
+  //  display: none;
+  //}
+}

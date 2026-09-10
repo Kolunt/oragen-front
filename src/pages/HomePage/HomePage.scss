@@ -1,0 +1,30 @@
+@import './src/styles/vars';
+
+.HomePage {
+  &__Content {
+    width: 100%;
+    display: flex;
+    column-gap: 5vw;
+  }
+
+  &__Block {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  .NewsBlock {
+    width: 100%;
+    max-width: 510px;
+    background-color: $color-background-l7;
+  }
+
+  .KpiBlock {
+    //margin-right: 40px;
+    height: calc(100vh - 270px);
+    width: 100%;
+    max-width: 290px;
+    background-color: $color-background-l7;
+  }
+}

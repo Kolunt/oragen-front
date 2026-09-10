@@ -1,0 +1,27 @@
+@import './src/styles/vars';
+
+.IconButtonAdd {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: $color-accent-primary;
+  transition: all 0.3s, transform 0.2s linear;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-accent-hover;
+  }
+
+  &--disabled {
+    background-color: $color-tertiary-l3;
+  }
+
+  svg {
+    width: 24px;
+  }
+}

@@ -1,0 +1,72 @@
+@import './src/styles/vars';
+
+.TableVisits {
+  width: 100%;
+  max-width: 840px;
+  //padding: 0px 15px;
+  background-color: $color-background-l8;
+  //border-collapse: collapse;
+  border-spacing: 0 20px;
+
+  //&:first-child {
+  //  border-spacing: 0px 0px;
+  //}
+
+  thead {
+    background-color: $color-white-l1;
+
+    th {
+      padding: 15px 0;
+      color: $color-primary-l1;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+      text-align: center;
+    }
+  }
+
+  tbody {
+    td {
+      color: $color-secondary-l2;
+      font-size: 10px;
+      line-height: 14px;
+      text-align: center;
+    }
+
+    .CellFullName {
+      padding-left: 10px;
+
+      &__Block {
+        display: flex;
+      }
+
+      &__Avatar {
+        margin-right: 14px;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+
+      &__Info {
+        h3 {
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 14px;
+          color: $color-primary-l1;
+          margin-bottom: 4px;
+        }
+      }
+    }
+
+    .CellSettings {
+      padding-right: 10px;
+      display: flex;
+      justify-content: space-between;
+
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+}

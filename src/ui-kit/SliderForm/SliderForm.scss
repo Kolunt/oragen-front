@@ -1,0 +1,33 @@
+@import './src/styles/vars';
+
+.SliderForm {
+  padding: 0 10px;
+  height: 36px;
+  width: 100%;
+  display: flex;
+  gap: 0 10px;
+  align-items: center;
+  background-color: $color-white-l1;
+  border-radius: 6px;
+  border: 1px solid $color-background-l5;
+
+  .Slider {
+    .rc-slider-handle {
+      width: 15px;
+      height: 15px;
+      border-color: $color-accent-primary;
+      cursor: pointer;
+      opacity: 1;
+      touch-action: none;
+    }
+
+    .rc-slider-handle:active {
+      box-shadow: none;
+    }
+  }
+
+  .Title {
+    font-size: 13px;
+    font-weight: 600;
+  }
+}

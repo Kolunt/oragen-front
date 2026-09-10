@@ -1,0 +1,16 @@
+@import './src/styles/vars';
+
+.ListTargetsSorting {
+  margin-bottom: 18px;
+  padding: 0 20px !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 22px 22px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+  color: $color-secondary-l2;
+
+  @media (max-width: 1200px) {
+    padding: 0 10px;
+  }
+}

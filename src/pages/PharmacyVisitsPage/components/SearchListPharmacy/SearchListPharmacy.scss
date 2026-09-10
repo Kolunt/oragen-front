@@ -1,0 +1,14 @@
+@import './src/styles/vars';
+
+.SearchListPharmacy {
+  width: 100%;
+  max-width: 290px;
+
+  .Form {
+    margin-bottom: 20px;
+    max-width: 290px;
+    padding: 20px 26px;
+    background-color: $color-background-l8;
+    border-radius: 10px;
+  }
+}

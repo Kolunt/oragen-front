@@ -1,0 +1,58 @@
+@import './src/styles/vars';
+
+.Button {
+  $this: &;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  //height: max-content;
+  width: max-content;
+  font-size: 12px;
+  font-weight: 600;
+  color: $color-white-l1;
+  background-color: $color-accent-primary;
+  border: none;
+  border-radius: 6px;
+  outline: transparent;
+  transition: all 0.3s, transform 0.2s linear;
+  cursor: pointer;
+
+  &-Text {
+    margin-left: 12px;
+  }
+
+  &:hover {
+    background-color: $color-accent-hover;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  //&#{$this}__disabled {
+  //  color: $color-tertiary-l3;
+  //  background-color: $color-background-l7;
+  //  cursor: default;
+  //
+  //  &:active{
+  //    transform: scale(1);
+  //  }
+  //
+  //  &:hover {
+  //    color: $color-disabled;
+  //    background-color: $color-disabled-secondary;
+  //    border-color: $color-disabled-secondary;
+  //  }
+  //}
+
+  &:disabled {
+    color: $color-tertiary-l3;
+    background-color: $color-background-l7;
+    cursor: default;
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+}

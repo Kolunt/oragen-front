@@ -1,0 +1,84 @@
+@import './src/styles/vars';
+
+.KpiList {
+  width: 100%;
+  max-width: 264px;
+  padding: 18px 14px;
+  border-radius: 10px;
+  background-color: $color-white-l1;
+
+  &__Title {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: $color-primary-l1;
+  }
+
+  .KpiCardList {
+    margin-bottom: 20px;
+
+    &__Item {
+      padding: 6px 10px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $color-primary-l1;
+      background-color: $color-background-l8;
+      border-radius: 6px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .Statistic {
+        margin-left: auto;
+      }
+    }
+
+    &__ShowAll {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $color-accent-primary;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+      cursor: pointer;
+
+      span {
+        margin-right: 8px;
+      }
+
+      .ArrowDown {
+        svg {
+          width: 9px;
+          fill: $color-accent-primary;
+        }
+      }
+
+      .ArrowTop {
+        width: 16px;
+        svg {
+          path {
+            fill: $color-accent-primary;
+          }
+        }
+      }
+    }
+  }
+
+  .AvatarStyle {
+    margin-right: 8px;
+    background-color: $color-background-l5;
+    border-radius: 50%;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import './src/styles/vars';
+
+.Breadcrumbs {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: $color-secondary-l2;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+  }
+
+  .CustomIcon {
+    svg {
+      height: 12px;
+      fill: $color-secondary-l2;
+    }
+  }
+
+  .Text {
+    padding: 2px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $color-white-l1;
+      background-color: $color-accent-hover;
+    }
+  }
+
+  .Accent {
+    color: $color-white-l1;
+    background-color: $color-accent-primary;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,68 @@
+@import '../../../styles/vars';
+
+.AddressInputControl {
+  $this: &;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  .react-dadata__container {
+    width: 100%;
+    position: relative;
+
+    .react-dadata__input {
+      width: 100%;
+      display: block;
+      outline: none;
+      padding: 10px 16px;
+      font-size: 12px;
+      color: $color-primary-l1;
+      background-color: $color-white-l1;
+      border: 1px solid $color-background-l5;
+      border-radius: 6px;
+      outline: transparent;
+      transition: all 0.25s ease;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
+      &:disabled {
+        background-color: $color-background-l7;
+      }
+    }
+  }
+
+  .react-dadata__suggestions {
+    z-index: 999;
+    .react-dadata__suggestion {
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+  }
+
+  &__Error .react-dadata__container {
+    .react-dadata__input {
+      border: 1px solid $color-negative;
+    }
+  }
+
+  &__Label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-tertiary-l3;
+  }
+
+  &__TextError {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-negative;
+  }
+}

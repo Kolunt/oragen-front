@@ -1,0 +1,37 @@
+@import './src/styles/vars';
+
+.ModalChangeEmployee {
+  width: 332px;
+  min-height: 300px;
+  background-color: $color-background-l8;
+
+  &__Header {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    color: $color-primary-l1;
+  }
+
+  &__Form {
+  }
+
+  &__ButtonGroup {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 10px;
+
+    .ButtonCancel {
+      padding: 10px 20px;
+      background-color: $color-background-l7;
+      color: $color-secondary-l2;
+    }
+
+    .ButtonCreate {
+      padding: 10px 60px;
+    }
+  }
+}

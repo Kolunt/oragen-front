@@ -1,0 +1,58 @@
+@import './src/styles/vars';
+
+.PaginationFull {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  .CustomSelect {
+    margin-left: 10px;
+    padding-top: 0;
+
+    .custom-select {
+      &__control {
+        height: 28px !important;
+        min-height: auto !important;
+        font-size: 12px !important;
+        background-color: transparent !important;
+        border: 1px solid $color-secondary-l2 !important;
+        border-radius: 6px !important;
+        box-shadow: none !important;
+        cursor: pointer !important;
+
+        .custom-select__value-container {
+          height: 100% !important;
+          padding: 0 8px !important;
+        }
+
+        .custom-select__single-value {
+          color: $color-secondary-l2 !important;
+          margin: 0 !important;
+        }
+
+        .custom-select__input-container {
+          padding: 0 !important;
+        }
+
+        .custom-select__indicators {
+          height: 100% !important;
+
+          svg {
+            color: $color-secondary-l2;
+          }
+
+          .custom-select__indicator {
+            padding: 0 6px 0 0 !important;
+          }
+        }
+      }
+
+      &__menu {
+        padding: 5px !important;
+        border: none !important;
+        z-index: 5 !important;
+      }
+    }
+  }
+}

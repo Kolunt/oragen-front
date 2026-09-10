@@ -1,0 +1,111 @@
+@import '../../../../styles/vars';
+
+.AuthorizationForm {
+  padding: 26px 40px 42px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  min-height: 450px;
+  background-color: $color-white-l1;
+  border-radius: 10px;
+
+  --background-input: #f8f8f8;
+  --border-color-input: transparent;
+  --padding-input: 16px 10px 16px 20px;
+
+  @media (max-width: 550px) {
+    padding: 20px 15px 15px 10px;
+  }
+
+  .CustomImage {
+    margin-bottom: 30px;
+  }
+
+  &__Title {
+    margin-bottom: 26px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    color: $color-primary-l1;
+  }
+
+  &__SubTitle {
+    margin-bottom: 26px;
+    font-size: 12px;
+    font-weight: 300;
+    color: $color-primary-l1;
+    text-align: center;
+  }
+
+  &__SavePassword {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px;
+    color: $color-tertiary-l3;
+
+    .ButtonLink {
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      border: none;
+      text-decoration: underline;
+      color: $color-text-link;
+      font-size: 12px;
+      font-weight: 300;
+      cursor: pointer;
+    }
+  }
+
+  &__Checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  .CustomInput {
+    display: flex;
+    align-items: center;
+    padding: 16px 10px 16px 20px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    color: #15120f;
+    background-color: $color-background-l8;
+    border-radius: 6px;
+    outline: transparent;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+    &.error {
+      border: 1px solid $color-negative;
+    }
+
+    &:hover {
+      background-color: $color-background-l8;
+    }
+
+    &::placeholder {
+      color: $color-tertiary-l3;
+      font-weight: 300;
+    }
+  }
+
+  .IconWrapper {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    cursor: pointer;
+
+    svg * {
+      fill: $color-black-l2;
+    }
+  }
+
+  .ButtonLogin {
+    width: 180px;
+  }
+}

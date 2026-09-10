@@ -1,0 +1,621 @@
+@import 'vars';
+@import 'reset';
+// todo добавить скоролл внутри, потому что сейчас экран обрезается
+
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  overflow: hidden;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  background-color: $color-background-l7;
+}
+
+#root,
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  padding: 0;
+  text-transform: capitalize;
+  transition: color 0.2s;
+  overflow: hidden;
+
+  &:hover {
+    color: var(--color-accent-primary);
+  }
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent-primary);
+    content: '';
+    transform: scale(0);
+    transition: transform 0.3s cubic-bezier(0.11, 0.7, 0, 1);
+  }
+
+  &:hover:after {
+    transform: scale(1);
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none; // Yeah, yeah everybody write about it
+}
+
+input[type='number'],
+input[type='number']:hover,
+input[type='number']:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+.ButtonCancel {
+  background-color: transparent;
+  color: $color-secondary-l2;
+  border: 1px solid $color-secondary-l2;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.list-for-table {
+  height: calc(100vh - 420px);
+  overflow-y: auto;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 600;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: end;
+}
+
+.items-flex-start {
+  align-items: flex-start;
+}
+.items-start {
+  justify-content: start;
+}
+
+.justify-start {
+  justify-content: start;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-space-around {
+  justify-content: space-around;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.justify-end {
+  justify-content: end;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.fz-0 {
+  font-size: 0;
+}
+.fz-10 {
+  font-size: 10px;
+}
+.fz-12 {
+  font-size: 12px;
+}
+.fz-13 {
+  font-size: 13px;
+}
+
+.fz-16 {
+  font-size: 16px;
+}
+
+.fz-20 {
+  font-size: 20px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-fit-content {
+  width: fit-content;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-150 {
+  width: 150px;
+}
+
+.w-200 {
+  width: 200px;
+}
+
+.w-450 {
+  width: 450px;
+}
+
+.w-500 {
+  width: 500px;
+}
+.w-600 {
+  width: 600px;
+}
+.w-700 {
+  width: 700px;
+}
+
+.br-6 {
+  border-radius: 6px;
+}
+.br-10 {
+  border-radius: 10px;
+}
+.br-50 {
+  border-radius: 50%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+.mr-a {
+  margin-right: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.padding-inherit {
+  padding: inherit;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.pt-5 {
+  padding-top: 5px;
+}
+.pb-5 {
+  padding-bottom: 5px;
+}
+.pr-5 {
+  padding-right: 5px;
+}
+.pl-5 {
+  padding-left: 5px;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+.pb-10 {
+  padding-bottom: 10px;
+}
+.pr-10 {
+  padding-right: 10px;
+}
+.pl-10 {
+  padding-left: 10px;
+}
+
+.pt-12 {
+  padding-top: 12px;
+}
+.pb-12 {
+  padding-bottom: 12px;
+}
+.pr-12 {
+  padding-right: 12px;
+}
+.pl-12 {
+  padding-left: 12px;
+}
+
+.pt-15 {
+  padding-top: 15px;
+}
+.pb-15 {
+  padding-bottom: 15px;
+}
+.pr-15 {
+  padding-right: 15px;
+}
+.pl-15 {
+  padding-left: 15px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+.pb-20 {
+  padding-bottom: 20px;
+}
+.pr-20 {
+  padding-right: 20px;
+}
+.pl-20 {
+  padding-left: 20px;
+}
+
+.pt-22 {
+  padding-top: 22px;
+}
+.pb-22 {
+  padding-bottom: 22px;
+}
+.pr-22 {
+  padding-right: 22px;
+}
+.pl-22 {
+  padding-left: 22px;
+}
+
+.pt-26 {
+  padding-top: 26px;
+}
+.pb-26 {
+  padding-bottom: 26px;
+}
+.pr-26 {
+  padding-right: 26px;
+}
+.pl-26 {
+  padding-left: 26px;
+}
+
+.pt-36 {
+  padding-top: 36px;
+}
+.pb-36 {
+  padding-bottom: 36px;
+}
+.pr-36 {
+  padding-right: 36px;
+}
+.pl-36 {
+  padding-left: 36px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+.mt-5 {
+  margin-top: 5px;
+}
+.mr-5 {
+  margin-right: 5px;
+}
+.ml-5 {
+  margin-left: 5px;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.mt--10 {
+  margin-top: -10px;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+.mr-15 {
+  margin-right: 15px;
+}
+.ml-15 {
+  margin-left: 15px;
+}
+
+.mb-18 {
+  margin-bottom: 18px;
+}
+.mt-18 {
+  margin-top: 18px;
+}
+.mr-18 {
+  margin-right: 18px;
+}
+.ml-18 {
+  margin-left: 18px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mr-20 {
+  margin-right: 20px;
+}
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mb-22 {
+  margin-bottom: 22px;
+}
+.mt-22 {
+  margin-top: 22px;
+}
+.mr-22 {
+  margin-right: 22px;
+}
+.ml-22 {
+  margin-left: 22px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.mr-30 {
+  margin-right: 30px;
+}
+.ml-30 {
+  margin-left: 30px;
+}
+
+.mb-36 {
+  margin-bottom: 36px;
+}
+.mt-36 {
+  margin-top: 36px;
+}
+.mr-36 {
+  margin-right: 36px;
+}
+.ml-36 {
+  margin-left: 36px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+.mt-40 {
+  margin-top: 40px;
+}
+.mr-40 {
+  margin-right: 40px;
+}
+.ml-40 {
+  margin-left: 40px;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.static {
+  position: static;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.gap-x-10 {
+  column-gap: 10px;
+}
+
+.gap-x-20 {
+  column-gap: 20px;
+}
+
+.gap-x-40 {
+  column-gap: 40px;
+}
+.gap-y-10 {
+  row-gap: 10px;
+}
+
+.word-break {
+  word-break: break-all;
+}
+
+.border-positive {
+  border: 1px solid $color-positive;
+}
+
+.border-negative {
+  border: 1px solid $color-negative;
+}
+
+.border-blue {
+  border: 1px solid $color-link-l1;
+}
+
+.border-grey {
+  border: 1px solid $color-background-l5;
+}
+
+.separator {
+  opacity: 0.1;
+  border-top: 1px solid #0b1f33;
+}
+
+.border-grey-left {
+  border-left: 1px solid $color-background-l5;
+}
+
+.ZoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.example-map {
+  width: 100%;
+  height: 600px;
+}
+
+.leaflet-popup-content {
+  font-size: 14px;
+}
+.leaflet-tooltip {
+  font-size: 14px;
+}

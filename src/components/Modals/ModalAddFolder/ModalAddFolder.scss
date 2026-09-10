@@ -1,0 +1,42 @@
+@import './src/styles/vars';
+
+.ModalAddFolder {
+  width: 332px;
+  background-color: $color-background-l8;
+
+  &__Header {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    color: $color-primary-l1;
+  }
+
+  &__Form {
+    .SwitchTitle {
+      font-size: 13px;
+      font-weight: 600;
+      color: $color-secondary-l2;
+    }
+
+    .ButtonGroup {
+      margin-top: 30px;
+      margin-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0 20px;
+
+      .ButtonCancel {
+        width: 100%;
+        background-color: $color-background-l7;
+        color: $color-secondary-l2;
+      }
+
+      .ButtonCreate {
+        width: 100%;
+      }
+    }
+  }
+}

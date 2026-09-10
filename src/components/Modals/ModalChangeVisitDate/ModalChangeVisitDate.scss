@@ -1,0 +1,39 @@
+@import './src/styles/vars';
+
+.ModalChangeVisitDate {
+  width: 332px;
+  background-color: $color-background-l8;
+
+  &__Header {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    color: $color-primary-l1;
+  }
+
+  &__Form {
+    & > div {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__ButtonGroup {
+    margin-top: 20px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .ButtonCancel {
+      padding: 10px 20px;
+      background-color: $color-background-l7;
+      color: $color-secondary-l2;
+    }
+
+    .ButtonCreate {
+      padding: 10px 60px;
+    }
+  }
+}

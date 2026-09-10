@@ -1,0 +1,14 @@
+@import '../../../../styles/vars';
+
+.ListContacts {
+  //max-width: 950px;
+  width: 100%;
+  padding: 22px 36px;
+  background-color: $color-background-l8;
+  border-radius: 10px;
+
+  @media (max-width: 1200px) {
+    max-width: none;
+    padding: 10px;
+  }
+}

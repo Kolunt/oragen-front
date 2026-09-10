@@ -1,0 +1,14 @@
+@import './src/styles/vars';
+
+.ListSorting {
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1.2fr 20px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+  color: $color-secondary-l2;
+  @media (max-width: 1200px) {
+    padding: 0 10px;
+  }
+}

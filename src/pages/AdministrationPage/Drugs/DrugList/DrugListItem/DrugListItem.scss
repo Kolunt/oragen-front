@@ -1,0 +1,31 @@
+@import '../../../../../styles/vars';
+
+.DrugListItem {
+  padding: 12px 20px;
+  margin-bottom: 5px;
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  background-color: $color-white-l1;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .Cell {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 17px;
+    color: $color-black-l2;
+  }
+
+  .SwitchWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

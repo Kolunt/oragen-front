@@ -1,0 +1,28 @@
+@import './src/styles/vars';
+
+.ModalAddEvent {
+  width: 332px;
+  min-height: 300px;
+  background-color: $color-background-l8;
+
+  &__Header {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    color: $color-primary-l1;
+  }
+
+  &__Form {
+    & > * {
+      margin-bottom: 10px;
+    }
+
+    .CustomTextArea {
+      textarea {
+        background-color: $color-white-l1;
+      }
+    }
+  }
+}

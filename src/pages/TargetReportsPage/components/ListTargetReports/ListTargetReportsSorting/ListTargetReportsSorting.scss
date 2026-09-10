@@ -1,0 +1,30 @@
+@import '../../../../../styles/vars';
+
+.ListTargetReportsSorting {
+  margin-bottom: 18px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 30px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  color: $color-secondary-l2;
+
+  @media (max-width: 1200px) {
+    padding: 0 10px;
+  }
+
+  &__Item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__Item--Start {
+    justify-content: flex-start;
+  }
+
+  span {
+    margin-right: 5px;
+  }
+}

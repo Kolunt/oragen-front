@@ -1,0 +1,12 @@
+@import '../../../../styles/vars';
+
+.ModalAddNews {
+  padding: 2px 10px;
+  width: 460px;
+  &__IconClose {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    cursor: pointer;
+  }
+}

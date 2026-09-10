@@ -1,0 +1,88 @@
+@import './src/styles/vars';
+
+.ListItemAllVisits {
+  padding: 12px 20px;
+  margin-bottom: 5px;
+  display: grid;
+  //grid-template-columns: 1.5fr 1fr 0.5fr 1.5fr 1fr 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 100px;
+  gap: 0 5px;
+  background-color: $color-white-l1;
+  border-radius: 6px;
+  font-size: 10px;
+  line-height: 14px;
+  color: $color-primary-l1;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .Block {
+    display: flex;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+  }
+
+  .Cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 14px;
+    color: $color-secondary-l2;
+    text-align: center;
+
+    &--Start {
+      justify-content: flex-start;
+    }
+  }
+
+  .IconWrapper {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .ActiveIcon {
+      svg * {
+        cursor: pointer;
+        fill: $color-accent-primary;
+      }
+    }
+
+    .DisabledIcon {
+      svg {
+        cursor: default;
+        path:first-child {
+          stroke: $color-tertiary-l3;
+        }
+        path:last-child {
+          fill: $color-tertiary-l3;
+        }
+      }
+    }
+  }
+
+  .Avatar {
+    margin-right: 8px;
+    background-color: $color-background-l5;
+    border-radius: 50%;
+  }
+
+  .BlockInfo {
+    h3 {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $color-primary-l1;
+    }
+
+    span {
+      font-size: 10px;
+      line-height: 14px;
+      color: $color-secondary-l2;
+    }
+  }
+}

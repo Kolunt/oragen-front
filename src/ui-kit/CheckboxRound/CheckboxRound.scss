@@ -1,0 +1,70 @@
+@import '../../styles/vars';
+
+.CheckboxRound {
+  display: flex;
+  align-content: center;
+  justify-content: start;
+  cursor: pointer;
+
+  /* *********************************
+  Радиокнопки
+  ********************************* */
+
+  .real-radio {
+    /* Скрываем реальную радио кнопку*/
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+
+    /*
+    display: none; - использовать нельзя, потому что не будет работать табуляция!
+    */
+  }
+
+  .custom-radio {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    //background-color: $color-white-l1;
+    border: 1px solid $color-grey-l5;
+    border-radius: 50%;
+  }
+
+  .custom-radio::before {
+    content: '';
+
+    /* Рисуем круг */
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: $color-white-l1;
+    border-radius: 50%;
+
+    /* Выравниваем по центру */
+    position: absolute;
+    left: 52%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.2s ease-in;
+  }
+
+  .real-radio:checked + .custom-radio {
+    border: none;
+    background-color: $color-radio;
+  }
+
+  .real-radio:checked + .custom-radio::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .Label {
+    margin-left: 10px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-primary-l1;
+  }
+}

@@ -1,0 +1,21 @@
+.PhoneInput {
+  position: relative;
+
+  .InputForm__Input {
+    padding-left: 46px;
+  }
+
+  &__Image {
+    position: absolute;
+    content: '';
+    top: 26px;
+    left: 16px;
+    width: 20px;
+    height: 15px;
+    border-radius: 3px;
+
+    img {
+      border-radius: 3px;
+    }
+  }
+}

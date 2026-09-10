@@ -1,0 +1,15 @@
+.VideoBottomPanel {
+  position: relative;
+  height: 100%;
+
+  .CustomVideo {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+
+    @media (max-width: 1200px) {
+      width: 150px;
+      height: 100px;
+    }
+  }
+}

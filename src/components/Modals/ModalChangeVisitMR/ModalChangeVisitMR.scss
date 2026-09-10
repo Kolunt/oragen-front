@@ -1,0 +1,65 @@
+@import './src/styles/vars';
+
+.ModalChangeVisitMR {
+  width: 332px;
+  background-color: $color-background-l8;
+
+  &__Header {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    color: $color-primary-l1;
+  }
+
+  &__Form {
+    .CustomDatePicker {
+      margin-top: 10px;
+      .react-datepicker__day {
+        width: 2.56rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    .CustomTextArea {
+      margin-top: 10px;
+      textarea {
+        background-color: $color-white-l1;
+      }
+    }
+
+    .CustomButton {
+      width: 100%;
+      background-color: $color-white-l1;
+      color: $color-positive;
+      border: 1px solid $color-positive;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: $color-positive;
+        color: $color-white-l1;
+      }
+    }
+
+    .Cancel {
+      background-color: $color-white-l1;
+      color: $color-accent-secondary;
+      border: 1px solid $color-accent-secondary;
+
+      &:hover {
+        background-color: $color-accent-secondary;
+      }
+    }
+
+    .Decline {
+      background-color: $color-white-l1;
+      color: $color-negative;
+      border: 1px solid $color-negative;
+
+      &:hover {
+        background-color: $color-negative;
+      }
+    }
+  }
+}

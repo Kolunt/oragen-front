@@ -1,0 +1,63 @@
+---------------общее-----------------
+во все запросы добавляем хедер (если он не ставится автоматически)
+Accept:application/json
+
+в запросы, требующие авторизацию добавляем хедер с токеном (без угловых скобок)
+Authorization:Bearer <token>
+
+---------------url-------------------
+http://46.36.222.99:8000/api
+---------------методы----------------
+request (не нужна авторизация)
+{
+  type: login,
+  email: user@user.com
+  password: <password>
+}
+response
+{
+    "access_token": "<token>",
+    "token_type": "bearer",
+    "expires_in": 3600,
+    "user": {
+        "id": 2,
+        "name": "User",
+        "first_name": "user",
+        "last_name": "user",
+        "email": "user@user.com",
+        "email_verified_at": null,
+        "signup_ip_address": "127.0.0.1",
+        "signup_confirmation_ip_address": "127.0.0.1",
+        "signup_sm_ip_address": null,
+        "admin_ip_address": null,
+        "updated_ip_address": "0.0.0.0",
+        "deleted_ip_address": null,
+        "created_at": "2023-02-20T17:22:01.000000Z",
+        "updated_at": "2023-02-20T17:48:04.000000Z",
+        "deleted_at": null
+    }
+}
+-------------------------------------
+request (нужна авторизация)
+{
+  type: getUser
+}
+response
+{
+    "id": 2,
+    "name": "User",
+    "first_name": "user",
+    "last_name": "user",
+    "email": "user@user.com",
+    "email_verified_at": null,
+    "signup_ip_address": "127.0.0.1",
+    "signup_confirmation_ip_address": "127.0.0.1",
+    "signup_sm_ip_address": null,
+    "admin_ip_address": null,
+    "updated_ip_address": "0.0.0.0",
+    "deleted_ip_address": null,
+    "created_at": "2023-02-20T17:22:01.000000Z",
+    "updated_at": "2023-02-20T17:48:04.000000Z",
+    "deleted_at": null
+}
+-------------------------------------

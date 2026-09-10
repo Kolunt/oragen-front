@@ -1,0 +1,44 @@
+@import './src/styles/vars';
+
+.RegisterFormVideoCall {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //background-color: $color-background-l5;
+
+  .Title {
+    margin: 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .SubTitle {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 2;
+    text-align: center;
+  }
+
+  .Date {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .Form {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .CustomButton {
+    &:disabled {
+      border: 1px solid $color-background-l5;
+    }
+  }
+}

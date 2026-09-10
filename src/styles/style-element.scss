@@ -1,0 +1,61 @@
+@import './src/styles/vars';
+
+.Circle {
+  margin-right: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: $color-application-planed;
+  border-radius: 50%;
+
+  &--completed {
+    background-color: $color-application-approved;
+  }
+
+  &--rejected {
+    background-color: $color-application-rejected;
+  }
+  &--todo {
+    background-color: $color-text-link;
+  }
+}
+
+.InfoList {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  .item {
+    font-size: 12px;
+    position: relative;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 4px;
+      width: 4px;
+      border-radius: 100%;
+      background: #000;
+      bottom: 0;
+      margin: auto;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.separator-bottom {
+  position: relative;
+  margin-bottom: 10px;
+  &:before {
+    content: '';
+    position: absolute;
+    background: $color-background-l5;
+    width: 90%;
+    height: 1px;
+    bottom: -5px;
+  }
+}

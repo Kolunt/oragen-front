@@ -1,0 +1,68 @@
+@import './src/styles/vars';
+
+.Footer {
+  margin-top: auto;
+  background-color: $color-white-l1;
+
+  &__container {
+    //max-width: 1366px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
+  }
+
+  &__left-bloc {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 800px) {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 550px) {
+      flex-direction: column;
+    }
+  }
+
+  &__right-bloc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    * {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .hidden-menu {
+    display: flex;
+  }
+
+  &__Button {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: $color-accent-primary;
+    transition: all 0.3s, transform 0.2s linear;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-accent-hover;
+    }
+  }
+}

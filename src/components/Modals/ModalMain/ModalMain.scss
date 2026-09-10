@@ -1,0 +1,75 @@
+@import './src/styles/vars';
+
+.ModalMain {
+  width: 332px;
+
+  &__Item {
+    padding: 7px 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: $color-white-l1;
+    color: $color-primary-l1;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $color-background-l5;
+    }
+  }
+
+  &__Icon {
+    margin-right: 15px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background-color: $color-background-l8;
+    transition: all 0.3s, transform 0.2s linear;
+    cursor: pointer;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  &__Big-Item {
+    padding: 15px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-white-l1;
+    color: $color-primary-l1;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $color-background-l5;
+    }
+  }
+
+  &__Big-Icon {
+    margin-bottom: 10px;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $color-background-l8;
+    transition: all 0.3s, transform 0.2s linear;
+    cursor: pointer;
+  }
+}

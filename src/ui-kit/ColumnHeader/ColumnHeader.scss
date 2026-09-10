@@ -1,0 +1,20 @@
+@import './src/styles/vars';
+
+.ColumnHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  span {
+    margin-right: 5px;
+    user-select: none;
+  }
+
+  &--Active {
+    padding: 5px 0px 5px 5px;
+    border-radius: 4px;
+    background-color: $color-accent-primary;
+    color: $color-white-l1;
+  }
+}

@@ -1,0 +1,33 @@
+@import './src/styles/vars';
+
+.MatchedContactsList {
+  //max-width: 840px;
+  width: 100%;
+  padding: 22px 36px;
+  background-color: $color-background-l8;
+  border-radius: 10px;
+
+  @media (max-width: 1200px) {
+    max-width: none;
+    padding: 10px;
+  }
+
+  .List {
+    height: calc(100vh - 350px);
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 98px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $color-grey-l6;
+      border-radius: 5rem;
+    }
+  }
+}

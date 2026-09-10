@@ -1,0 +1,117 @@
+@import './src/styles/vars';
+
+.GeoTargetingPage {
+  &__Header {
+    margin-bottom: 20px;
+  }
+
+  .GeoTargetingList {
+    width: 100%;
+    padding: 14px;
+    background-color: $color-background-l8;
+    border-radius: 10px;
+
+    @media (max-width: 1200px) {
+      max-width: none;
+    }
+
+    @media (max-width: 800px) {
+      width: 800px;
+    }
+
+    .ListHeader {
+      margin-bottom: 18px;
+      padding: 12px 20px;
+      display: grid;
+      grid-template-columns: 1.25fr 1.25fr 0.75fr 0.75fr;
+      gap: 0px 0px;
+      background-color: transparent;
+      border-radius: 4px;
+
+      &__Item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+        color: $color-secondary-l2;
+
+        @media (max-width: 800px) {
+          align-items: flex-start;
+        }
+      }
+    }
+    .ListItem {
+      padding: 12px 20px;
+      margin-bottom: 5px;
+      display: grid;
+      grid-template-columns: 1.25fr 1.25fr 0.75fr 0.75fr;
+      gap: 0px 0px;
+      background-color: $color-white-l1;
+      border-radius: 6px;
+      font-size: 10px;
+      line-height: 14px;
+      color: $color-primary-l1;
+      cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .Block {
+        display: flex;
+
+        @media (max-width: 700px) {
+          flex-direction: column;
+        }
+      }
+
+      .Cell {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 10px;
+        line-height: 14px;
+        color: $color-secondary-l2;
+        text-align: center;
+      }
+
+      .Settings {
+        justify-content: space-around;
+
+        svg {
+          cursor: pointer;
+        }
+      }
+
+      .Avatar {
+        margin-right: 8px;
+        background-color: $color-background-l5;
+        border-radius: 50%;
+      }
+
+      .BlockInfo {
+        h3 {
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 14px;
+          color: $color-primary-l1;
+        }
+
+        span {
+          font-size: 10px;
+          line-height: 14px;
+          color: $color-secondary-l2;
+        }
+      }
+    }
+
+    .GeoTargetingPaginate {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

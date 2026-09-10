@@ -1,0 +1,44 @@
+@import '../../../../styles/vars';
+
+.ContactsPageForm {
+  label {
+    font-size: 13px;
+  }
+
+  input {
+    background-color: $color-background-l8;
+    font-size: 13px;
+    font-weight: 600;
+
+    &::placeholder {
+      font-weight: 400;
+    }
+  }
+}
+
+.AddEmployeeFormGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  grid-gap: 20px 20px;
+
+  .CustomSelect {
+    font-size: 13px;
+    font-weight: 600;
+
+    label {
+      font-size: 13px;
+      font-weight: 400;
+      color: $color-tertiary-l3;
+    }
+
+    .custom-select__control {
+      min-height: 40px !important;
+      font-size: 13px !important;
+      background-color: $color-background-l8 !important;
+    }
+
+    .custom-select__placeholder {
+      font-weight: 400 !important;
+    }
+  }
+}

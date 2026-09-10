@@ -1,0 +1,224 @@
+@import './src/styles/vars';
+
+.ModalSubTaskInfo {
+  width: 1100px;
+  background-color: transparent;
+
+  &__Header {
+    margin-bottom: 13px;
+  }
+
+  &__Content {
+    display: flex;
+
+    .SubTaskInfo {
+      padding: 20px;
+      width: 100%;
+      background-color: $color-white-l1;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+
+      .DatePickerWrapper {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+
+        label {
+          font-size: 13px;
+        }
+
+        .CustomDatePicker {
+          width: 160px;
+
+          input {
+            font-size: 13px;
+            font-weight: 600;
+
+            &::placeholder {
+              font-weight: 400;
+            }
+          }
+        }
+
+        .CustomSelect {
+          width: 170px;
+          font-size: 13px;
+          font-weight: 600;
+
+          label {
+            font-size: 13px;
+            font-weight: 400;
+          }
+
+          .custom-select__control {
+            font-size: 13px !important;
+          }
+        }
+      }
+
+      .TextAreaWrapper {
+        .InputField {
+          margin-bottom: 10px;
+          width: 100%;
+          height: 130px;
+          padding: 10px;
+          border-radius: 6px;
+          border: 1px solid $color-background-l5;
+          resize: none;
+          outline: none;
+          font-size: 13px;
+          background-color: $color-background-l8;
+        }
+      }
+
+      .Label {
+        color: $color-secondary-l2;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+
+      .FileUpload {
+        width: 100%;
+
+        &__Label {
+          display: flex;
+          gap: 0 5px;
+          margin-bottom: 3px;
+          color: $color-secondary-l2;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 18px;
+
+          .CustomButton {
+            padding: 0;
+            margin: 0;
+            color: $color-accent-primary;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
+          }
+        }
+
+        &__Content {
+          margin-bottom: 10px;
+
+          .Dropzone {
+            padding: 10px;
+            width: 100%;
+            min-height: 42px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            gap: 0 10px;
+            border: 1px dashed $color-secondary-l2;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+            color: $color-black-l2;
+
+            .UploadedFilesItem {
+              display: flex;
+              align-items: center;
+              gap: 0 5px;
+              font-size: 13px;
+              font-weight: 600;
+              line-height: 18px;
+              color: $color-secondary-l2;
+
+              .CustomIconDelete {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+
+                svg {
+                  path {
+                    fill: $color-negative;
+                  }
+                }
+              }
+            }
+          }
+
+          .Text {
+            color: $color-secondary-l2;
+          }
+        }
+
+        &__ButtonActions {
+          .ButtonClearAll {
+            padding: 5px 10px;
+            color: $color-white-l1;
+            background-color: $color-secondary-l2;
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 400;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .Buttons {
+        margin-top: 20px;
+        display: flex;
+        gap: 0 10px;
+
+        .ButtonCreate {
+        }
+      }
+    }
+
+    .Users {
+      padding: 20px;
+      margin-left: 2px;
+      width: 290px;
+      flex-shrink: 0;
+      background-color: $color-white-l1;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+
+      .User {
+        margin-bottom: 13px;
+        display: flex;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .Avatar {
+          width: 35px;
+          height: 35px;
+          margin-right: 10px;
+        }
+
+        .UserInfo {
+          h3 {
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 18px;
+            color: $color-black-l2;
+          }
+
+          span {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+            color: $color-secondary-l2;
+          }
+        }
+      }
+
+      .Accent {
+        padding-bottom: 5px;
+        border-bottom: 1px solid $color-background-l5;
+      }
+    }
+  }
+}

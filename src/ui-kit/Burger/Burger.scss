@@ -1,0 +1,17 @@
+@import './src/styles/vars';
+
+.Burger {
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+
+  > div {
+    width: 100%;
+    height: 3px;
+    background-color: $color-black-l2;
+  }
+
+  > div + div {
+    margin-top: 5px;
+  }
+}

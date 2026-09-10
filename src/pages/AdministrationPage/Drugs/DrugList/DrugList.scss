@@ -1,0 +1,17 @@
+@import './src/styles/vars';
+
+.DrugList {
+  width: 100%;
+  max-width: 840px;
+  padding: 14px;
+  background-color: $color-background-l8;
+  border-radius: 10px;
+
+  @media (max-width: 1200px) {
+    max-width: none;
+  }
+
+  @media (max-width: 800px) {
+    width: 800px;
+  }
+}

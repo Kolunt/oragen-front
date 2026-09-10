@@ -1,0 +1,36 @@
+@import './src/styles/vars';
+
+.UploaderDropzone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px 36px;
+  text-align: center;
+  width: 100%;
+  background-color: $color-white-l1;
+  border: 1px dashed $color-grey-l4;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &.active {
+    background-color: $color-white-l9;
+  }
+
+  &-Title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-secondary-l2;
+
+    .Icon {
+      margin-right: 22px;
+    }
+
+    span {
+      color: $color-accent-primary;
+    }
+  }
+}

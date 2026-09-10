@@ -1,0 +1,87 @@
+@import './src/styles/vars';
+
+.ChangeTargetPage {
+  background-color: $color-background-l7;
+
+  &__Header {
+    margin-bottom: 13px;
+  }
+
+  .ContactsPageForm {
+    padding: 20px;
+    width: 100%;
+    background-color: $color-white-l1;
+    //border-bottom-left-radius: 10px;
+    //border-top-left-radius: 10px;
+    border-radius: 10px;
+
+    .NumberOfVisitsGrid {
+      margin-bottom: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+      grid-gap: 10px 20px;
+    }
+
+    .CustomInput {
+      margin-bottom: 10px;
+
+      label {
+        font-size: 13px;
+      }
+
+      input {
+        background-color: $color-background-l8;
+        font-size: 13px;
+        font-weight: 600;
+
+        &::placeholder {
+          font-weight: 400;
+        }
+      }
+    }
+
+    .CustomSelect {
+      margin-bottom: 10px;
+      font-size: 13px;
+      font-weight: 600;
+
+      label {
+        font-size: 13px;
+        font-weight: 400;
+        color: $color-tertiary-l3;
+      }
+
+      .custom-select__control {
+        min-height: 40px !important;
+        font-size: 13px !important;
+        background-color: $color-background-l8 !important;
+      }
+
+      .custom-select__placeholder {
+        font-weight: 400 !important;
+      }
+    }
+
+    .Label {
+      color: $color-secondary-l2;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    .Buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 0 10px;
+
+      .ButtonCreate {
+      }
+
+      .ButtonCancel {
+        background-color: transparent;
+        color: $color-secondary-l2;
+        border: 1px solid $color-secondary-l2;
+      }
+    }
+  }
+}

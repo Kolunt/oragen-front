@@ -1,0 +1,11 @@
+@import './src/styles/vars';
+
+.ProgressCircle {
+  width: 32px;
+  height: 32px;
+
+  .CircularProgressbar-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700 !important;
+  }
+}

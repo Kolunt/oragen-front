@@ -1,0 +1,134 @@
+@import './src/styles/vars';
+
+.Application {
+  margin-bottom: 10px;
+  background-color: $color-background-l8;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__Header {
+    width: 100%;
+    padding: 20px 25px;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 180px;
+    column-gap: 15px;
+
+    .ApplicationNumber {
+      &__Number {
+        margin-bottom: 5px;
+        line-height: 14px;
+      }
+
+      &__Status {
+        display: flex;
+        align-items: center;
+
+        .Circle {
+          margin-right: 8px;
+          width: 10px;
+          height: 10px;
+          background-color: $color-application-planed;
+          border-radius: 50%;
+
+          &--completed {
+            background-color: $color-application-approved;
+          }
+
+          &--rejected {
+            background-color: $color-application-rejected;
+          }
+        }
+
+        span {
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 16px;
+          color: $color-primary-l1;
+        }
+      }
+    }
+
+    .Profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__Info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__Title {
+        line-height: 14px;
+      }
+
+      &__Phone {
+        line-height: 14px;
+      }
+    }
+  }
+
+  &__Inner {
+    padding: 18px 25px;
+    background-color: $color-white-l1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    .Row {
+      margin-bottom: 8px;
+      display: grid;
+      grid-template-columns: 0.6fr 1.6fr;
+      align-items: center;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .Row__Title {
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 14px;
+      color: $color-date-picker;
+      margin-right: 10px;
+    }
+
+    .Row__Inner {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+
+    .Row__Span {
+      max-width: 206px;
+      margin-right: 20px;
+      padding: 8px 12px;
+      background-color: $color-background-l8;
+      color: $color-date-picker;
+      border-radius: 6px;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+    }
+
+    .Arrow {
+      margin: auto 20px auto 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        height: 14px;
+        fill: $color-grey-l4;
+      }
+    }
+  }
+
+  .AvatarStyle {
+    background-color: $color-background-l5;
+    border-radius: 50%;
+  }
+}

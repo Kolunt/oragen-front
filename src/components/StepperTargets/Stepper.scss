@@ -1,0 +1,77 @@
+@import '../../styles/vars';
+
+.Stepper {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+
+  .Step {
+    padding: 0 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    flex-shrink: 1;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $color-background-l5;
+    }
+
+    &:last-child::after {
+      content: none;
+    }
+
+    &__passing::after {
+      background-color: $color-application-planed;
+    }
+
+    .Round {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      border-radius: 50%;
+      font-size: 16px;
+      font-weight: 600;
+      color: $color-white-l1;
+      background-color: $color-background-l5;
+      cursor: default;
+      user-select: none;
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+
+      &__selected {
+        background-color: $color-accent-hover;
+        color: $color-white-l1;
+      }
+
+      &__passing {
+        background-color: $color-white-l1;
+        color: $color-accent-hover;
+      }
+    }
+
+    .Label {
+      flex-shrink: 0;
+      user-select: none;
+      font-size: 12px;
+      color: $color-secondary-l2;
+      font-weight: 600;
+      cursor: default;
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
+
+      &__selected {
+        //color: $co;
+      }
+    }
+  }
+}

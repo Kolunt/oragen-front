@@ -1,0 +1,16 @@
+@import './src/styles/vars';
+
+.ModalTaskSelection {
+  padding: 24px;
+  width: 290px;
+  height: 136px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-background-l8;
+
+  .CustomButton {
+    width: 100%;
+  }
+}

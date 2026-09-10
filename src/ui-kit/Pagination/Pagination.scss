@@ -1,0 +1,89 @@
+@import './src/styles/vars';
+
+.Pagination {
+  padding: 0;
+  $this: &;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  outline: transparent;
+
+  & > li {
+    margin-right: 6px;
+    width: 28px;
+    height: 28px;
+    user-select: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  & > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: $color-secondary-l2;
+    font-size: 12px;
+    //background-color: transparent;
+    border: 1px solid $color-secondary-l2;
+    border-radius: 6px;
+    outline: transparent;
+    cursor: pointer;
+
+    //&:hover {
+    //  border: 1px solid $color-accent-active;
+    //}
+  }
+
+  & > #{$this}__active > a {
+    background-color: $color-accent-active;
+    border-color: $color-accent-active;
+    color: $color-white-l1;
+  }
+
+  & > #{$this}__active > a,
+  & > #{$this}__active > a:hover,
+  & > #{$this}__active > a:focus {
+    background-color: $color-accent-active;
+    border-color: $color-accent-active;
+    color: $color-white-l1;
+    outline: transparent;
+    cursor: default;
+  }
+
+  .Pagination__page-link {
+    svg {
+      width: 10px;
+      height: 10px;
+      fill: $color-secondary-l2;
+    }
+  }
+
+  & > .disabled {
+    border-color: $color-background-l5;
+
+    &:hover {
+      border-color: $color-background-l5;
+    }
+  }
+
+  & > .disabled > a {
+    color: $color-background-l5;
+    border-color: $color-background-l5;
+    cursor: default;
+
+    svg {
+      width: 10px;
+      height: 10px;
+      fill: $color-secondary-l2;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

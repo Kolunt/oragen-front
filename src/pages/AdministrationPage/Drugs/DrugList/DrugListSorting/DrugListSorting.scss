@@ -1,0 +1,28 @@
+@import '../../../../../styles/vars';
+
+.DrugListSorting {
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  background-color: transparent;
+  border-radius: 4px;
+
+  &__Item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: $color-secondary-l2;
+
+    @media (max-width: 800px) {
+      align-items: flex-start;
+    }
+
+    &:last-child {
+      justify-content: center;
+    }
+  }
+}

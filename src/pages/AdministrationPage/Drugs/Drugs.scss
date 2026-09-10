@@ -1,0 +1,14 @@
+@import './src/styles/vars';
+
+.Drugs {
+  background-color: $color-background-l7;
+
+  &__Header {
+    margin-bottom: 20px;
+  }
+
+  &__Content {
+    display: flex;
+    justify-content: space-around;
+  }
+}

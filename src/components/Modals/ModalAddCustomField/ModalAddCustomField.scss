@@ -1,0 +1,12 @@
+@import './src/styles/vars';
+
+.ModalAddCustomField {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+
+  .CustomButton {
+    width: 100%;
+  }
+}

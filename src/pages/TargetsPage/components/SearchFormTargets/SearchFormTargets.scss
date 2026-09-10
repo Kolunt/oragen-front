@@ -1,0 +1,80 @@
+@import './src/styles/vars';
+
+.SearchFormTargets {
+  width: 100%;
+  max-width: 290px;
+  flex-shrink: 0;
+
+  /*@media (max-width: 1200px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: none;
+    }*/
+
+  .Form {
+    margin-bottom: 20px;
+    max-width: 290px;
+    padding: 20px 26px;
+    background-color: $color-background-l8;
+    border-radius: 10px;
+
+    /*@media (max-width: 1200px) {
+        display: flex;
+        align-items: end;
+        max-width: 100%;
+        margin-bottom: 5px;
+        padding: 5px 10px 10px 10px;
+      }*/
+
+    & > * {
+      margin-bottom: 20px;
+
+      /* @media (max-width: 1200px) {
+          margin-bottom: 0px;
+        }*/
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .SearchStyle {
+    /*@media (max-width: 1200px) {
+        width: 200px;
+      }*/
+  }
+
+  .SelectStyle {
+    /* @media (max-width: 1200px) {
+        width: 200px;
+        margin-left: 10px;
+      }*/
+  }
+
+  .ButtonReset {
+    width: 236px;
+    background-color: $color-background-l7;
+    color: $color-tertiary-l3;
+
+    /*@media (max-width: 1200px) {
+        display: none;
+      }*/
+  }
+
+  .ButtonWrapper {
+    max-width: 290px;
+    display: flex;
+    justify-content: center;
+
+    /*@media (max-width: 1200px) {
+        display: none;
+      }*/
+
+    .ButtonCreate {
+      width: 236px;
+      padding: 10px 0;
+    }
+  }
+}

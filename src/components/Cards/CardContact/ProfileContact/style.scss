@@ -1,0 +1,9 @@
+@import './src/styles/vars';
+
+.grid {
+  width: 600px;
+  .item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+  }
+}

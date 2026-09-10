@@ -1,0 +1,122 @@
+@import './src/styles/vars';
+
+.MainPage {
+  background-color: $color-background-l8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    background-color: $color-white-l1;
+    height: 64px;
+
+    &__content {
+      max-width: 1366px;
+      margin: 0 auto;
+    }
+  }
+
+  .main {
+    padding-top: 73px;
+    padding-bottom: 22px;
+
+    @media (max-width: 550px) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: 1000px) {
+        justify-content: center;
+      }
+    }
+
+    &__title {
+      max-width: 520px;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 41px;
+      color: $color-primary-l1;
+
+      @media (max-width: 1000px) {
+        display: none;
+      }
+    }
+  }
+
+  .footer {
+    margin-top: auto;
+    padding-top: 22px;
+    padding-bottom: 28px;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .copyright {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px;
+    color: $color-secondary-l2;
+  }
+
+  .nav {
+    display: flex;
+
+    &__item {
+      margin-right: 28px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .link {
+    position: relative;
+    text-decoration: none;
+    padding: 0;
+    text-transform: capitalize;
+    transition: color 0.2s;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19px;
+    color: $color-secondary-l2;
+
+    &:hover {
+      color: $color-accent-primary;
+    }
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $color-accent-primary;
+      content: '';
+      transform: scale(0);
+      transition: transform 0.3s cubic-bezier(0.11, 0.7, 0, 1);
+    }
+
+    &:hover:after {
+      transform: scale(1);
+    }
+  }
+}

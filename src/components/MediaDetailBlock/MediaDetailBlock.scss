@@ -1,0 +1,120 @@
+@import './src/styles/vars';
+
+.MediaDetailBlock {
+  width: 100%;
+  padding: 25px 20px 30px 58px;
+  background-color: $color-white-l1;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  .FilterPanel {
+    margin-bottom: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .Title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 19px;
+      color: $color-black-l2;
+      cursor: pointer;
+
+      svg {
+        margin-right: 10px;
+        fill: $color-grey-l3;
+        cursor: pointer;
+      }
+    }
+
+    .Filters {
+      display: flex;
+      align-items: center;
+
+      &__Item {
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        color: $color-black-l2;
+        cursor: pointer;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        span {
+          margin: 0px 5px;
+        }
+      }
+
+      .Download {
+        color: $color-grey-l4;
+
+        svg {
+          fill: $color-grey-l4;
+        }
+      }
+
+      .Select {
+        margin-right: 10px;
+        padding: 10px;
+        border: 1px solid $color-background-l8;
+        border-radius: 6px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        svg {
+          margin-right: 5px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .Folders {
+    padding: 0px 10px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 24px 48px;
+
+    .Folder {
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        margin-bottom: 10px;
+      }
+
+      span {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 14px;
+        color: $color-primary-l1;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: initial;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+      }
+    }
+  }
+}

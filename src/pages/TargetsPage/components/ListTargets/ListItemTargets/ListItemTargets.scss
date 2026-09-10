@@ -1,0 +1,44 @@
+@import './src/styles/vars';
+
+.ListItemTargets {
+  padding: 12px 20px;
+  margin-bottom: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 22px 22px;
+  background-color: $color-white-l1;
+  border-radius: 6px;
+  font-size: 10px;
+  line-height: 14px;
+  color: $color-primary-l1;
+  cursor: pointer;
+
+  @media (max-width: 1200px) {
+    padding: 10px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .Cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+    color: $color-black-l2;
+
+    &--Start {
+      justify-content: start;
+    }
+
+    svg * {
+      stroke: $color-accent-primary;
+    }
+  }
+
+  .Accent {
+    font-weight: 700;
+  }
+}

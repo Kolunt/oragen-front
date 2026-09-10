@@ -1,0 +1,48 @@
+@import './src/styles/vars';
+
+.ModalApplicationContact {
+  width: 332px;
+  min-height: 300px;
+  background-color: $color-background-l8;
+
+  &__Header {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    color: $color-primary-l1;
+  }
+
+  &__Form {
+    & > * {
+      margin-bottom: 10px;
+    }
+
+    .Select {
+      .custom-select {
+        &__control {
+          border: 1px solid $color-background-l5 !important;
+        }
+      }
+    }
+  }
+
+  &__ButtonGroup {
+    margin-top: 20px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .ButtonCancel {
+      padding: 10px 20px;
+      background-color: $color-background-l7;
+      color: $color-secondary-l2;
+    }
+
+    .ButtonCreate {
+      padding: 10px 60px;
+    }
+  }
+}

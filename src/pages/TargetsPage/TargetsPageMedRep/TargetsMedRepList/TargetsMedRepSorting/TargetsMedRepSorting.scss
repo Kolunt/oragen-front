@@ -1,0 +1,16 @@
+@import './src/styles/vars';
+
+.TargetsMedRepSorting {
+  margin-bottom: 18px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr 1.5fr 0.5fr 50px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+  color: $color-secondary-l2;
+
+  @media (max-width: 1200px) {
+    padding: 0 10px;
+  }
+}

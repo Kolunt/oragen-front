@@ -1,0 +1,42 @@
+@import './src/styles/vars';
+
+.BrickInfo {
+  .ListWrapper {
+    padding: 20px;
+    width: 100%;
+    background-color: $color-background-l8;
+    border-radius: 10px;
+
+    .List {
+      .ListItem {
+        padding: 10px 20px;
+        margin-bottom: 5px;
+        display: grid;
+        grid-template-columns: 1fr 150px;
+        background-color: $color-white-l1;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .Cell {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 17px;
+          color: $color-black-l2;
+        }
+      }
+    }
+
+    .RemoveButton {
+      background-color: $color-white-l1;
+      color: $color-negative;
+      border: 1px solid $color-negative;
+    }
+  }
+}

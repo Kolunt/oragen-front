@@ -1,0 +1,32 @@
+@import './src/styles/vars';
+
+.LoginMethodSelectionVideoCall {
+  display: flex;
+  flex-direction: column;
+
+  .BlockButton {
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: $color-white-l1;
+    border-radius: 10px;
+    margin-bottom: 5px;
+  }
+
+  .WithoutRegistration {
+    width: 100%;
+    padding: 40px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-white-l1;
+    border-radius: 10px;
+
+    .CustomInput {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}

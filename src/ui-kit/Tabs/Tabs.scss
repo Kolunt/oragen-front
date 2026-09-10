@@ -1,0 +1,49 @@
+@import './src/styles/vars';
+
+.Tabs {
+  padding: 4px 6px;
+  display: flex;
+  font-size: 12px;
+  border-radius: 11px;
+  background-color: $color-background-l8;
+  color: $color-secondary-l2;
+  font-weight: 600;
+}
+
+.Tab {
+  padding: 7px 16px;
+  margin-right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+
+  @media (max-width: 700px) {
+    margin-right: 5px;
+    padding: 7px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__selected {
+    background-color: $color-white-l1;
+    color: $color-black-l2;
+  }
+
+  &:hover {
+    background-color: $color-white-l1;
+  }
+
+  &Label {
+    user-select: none;
+  }
+
+  .CustomIcon {
+    margin-right: 5px;
+    flex-shrink: 0;
+  }
+}

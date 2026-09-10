@@ -1,0 +1,288 @@
+@import './src/styles/vars';
+
+.EventInfoPage {
+  background-color: $color-background-l7;
+
+  &__Content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .EventInfoBlock {
+    //margin-right: 40px;
+    width: 100%;
+    max-width: 756px;
+    //background-color: $color-background-l8;
+
+    .Breadcrumbs {
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      color: $color-tertiary-l3;
+      cursor: pointer;
+
+      a {
+        margin-right: 8px;
+        color: $color-tertiary-l3;
+      }
+
+      span {
+        margin-right: 8px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      svg {
+        margin-right: 10px;
+        height: 8px;
+        fill: $color-grey-l3;
+      }
+    }
+
+    &__Header {
+      margin-bottom: 26px;
+      display: flex;
+      align-items: center;
+
+      h3 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22px;
+        color: $color-primary-l1;
+      }
+    }
+
+    .Uploader {
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+
+      &__Button {
+        margin-right: 10px;
+        padding: 6px 10px;
+        display: flex;
+        align-items: center;
+        background-color: $color-background-l7;
+        color: $color-tertiary-l3;
+        border-radius: 3px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+        cursor: pointer;
+
+        svg {
+          margin-right: 6px;
+        }
+      }
+    }
+
+    .MemberList {
+      &__Header {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .Title {
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 16px;
+          color: $color-primary-l1;
+        }
+
+        .Details {
+          width: 28px;
+          height: 28px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $color-white-l1;
+          border-radius: 3px;
+          cursor: pointer;
+        }
+      }
+
+      .List {
+        &__Item {
+          margin-bottom: 5px;
+          padding: 10px 20px;
+          display: grid;
+          grid-template-columns: 1.5fr 1fr 1fr 0.5fr;
+          gap: 0px 0px;
+          border-radius: 6px;
+          background-color: $color-white-l1;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .Avatar {
+            margin-right: 6px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color-background-l5;
+          }
+
+          .Cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 14px;
+            color: $color-secondary-l2;
+          }
+
+          .Cell--start {
+            justify-content: start;
+            color: $color-primary-l1;
+          }
+
+          .Settings {
+            display: flex;
+            justify-content: end;
+
+            svg {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .EventCard {
+    height: 100%;
+    width: 100%;
+    max-width: 264px;
+    background-color: $color-white-l1;
+    border: $color-white-l1;
+    border-radius: 10px;
+
+    &__Header {
+      padding: 16px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-accent-primary;
+      color: $color-white-l1;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 16px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+
+    &__Header--active {
+      background-color: $color-positive;
+    }
+
+    &__Header--arhive {
+      background-color: $color-tertiary-l3;
+    }
+
+    &__Main {
+      padding: 16px 16px 10px 16px;
+
+      .List {
+        margin-bottom: 30px;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 14px;
+        color: $color-primary-l1;
+
+        &__Item {
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        span {
+          margin-right: 5px;
+          color: $color-tertiary-l3;
+        }
+
+        .ItemCheckBox {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .Checkbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .CheckBox-Inner {
+            }
+          }
+
+          span {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    &__Footer {
+      padding: 0px 16px 14px 16px;
+
+      //.VisitDetails {
+      //  margin-right: 10px;
+      //  width: 36px;
+      //  height: 36px;
+      //  display: flex;
+      //  justify-content: center;
+      //  align-items: center;
+      //  background-color: $color-background-l7;
+      //  border-radius: 6px;
+      //  cursor: pointer;
+      //}
+
+      .EventCard__Footer-Row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .ButtonStart {
+        padding: 10px;
+
+        &--active {
+          padding: 10px 20px;
+          background-color: $color-positive;
+        }
+
+        &--closed {
+          padding: 10px 20px;
+          background-color: $color-negative;
+        }
+      }
+
+      .ButtonOnCall {
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+        background-color: $color-positive;
+      }
+
+      .ButtonListener {
+        margin-top: 10px;
+        margin-left: 5px;
+        flex-shrink: 0;
+        padding: 10px;
+      }
+    }
+  }
+}

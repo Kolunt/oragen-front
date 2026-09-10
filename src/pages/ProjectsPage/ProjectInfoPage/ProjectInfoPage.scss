@@ -1,0 +1,197 @@
+@import './src/styles/vars';
+
+.ProjectInfoPage {
+  background-color: $color-background-l7;
+
+  &__Header {
+    margin-bottom: 13px;
+  }
+
+  &__Content {
+    display: flex;
+
+    .ContactsPageForm {
+      padding: 20px;
+      width: 100%;
+      background-color: $color-white-l1;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+
+      .DatePickerWrapper {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+
+        label {
+          font-size: 13px;
+        }
+
+        .CustomDatePicker {
+          width: 160px;
+
+          input {
+            font-size: 13px;
+            font-weight: 600;
+
+            &::placeholder {
+              font-weight: 400;
+            }
+          }
+        }
+
+        .CustomSelect {
+          width: 160px;
+          font-size: 13px;
+          font-weight: 600;
+
+          label {
+            font-size: 13px;
+            font-weight: 400;
+          }
+
+          .custom-select__control {
+            font-size: 13px !important;
+          }
+        }
+      }
+
+      .TextAreaWrapper {
+        .InputField {
+          margin-bottom: 10px;
+          width: 100%;
+          height: 130px;
+          padding: 10px;
+          border-radius: 6px;
+          border: 1px solid $color-background-l5;
+          resize: none;
+          outline: none;
+          font-size: 13px;
+          background-color: $color-background-l8;
+        }
+      }
+
+      .Label {
+        color: $color-secondary-l2;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+
+      .SubTasks {
+        &__Header {
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+          gap: 0 5px;
+
+          .CustomIcon {
+            cursor: pointer;
+          }
+        }
+
+        &__Title {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 19px;
+        }
+
+        .SubTaskList {
+          padding: 0;
+
+          .SubTask {
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 0 5px;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 18px;
+            color: $color-secondary-l2;
+            cursor: pointer;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            .CustomIconCheck {
+              width: 16px;
+              height: 16px;
+
+              svg {
+                path {
+                  fill: $color-positive;
+                }
+              }
+            }
+
+            &:nth-child(even) {
+              .CustomIconCheck {
+                svg {
+                  path {
+                    fill: $color-secondary-l2;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .Buttons {
+        margin-top: 20px;
+        display: flex;
+        gap: 0 10px;
+
+        .ButtonCreate {
+        }
+      }
+    }
+
+    .Users {
+      margin-left: 2px;
+      padding: 20px;
+      width: 290px;
+      flex-shrink: 0;
+      background-color: $color-white-l1;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+
+      .User {
+        margin-bottom: 13px;
+        display: flex;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .Avatar {
+          width: 35px;
+          height: 35px;
+          margin-right: 10px;
+        }
+
+        .UserInfo {
+          h3 {
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 18px;
+            color: $color-black-l2;
+          }
+
+          span {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+            color: $color-secondary-l2;
+          }
+        }
+      }
+
+      .Accent {
+        padding-bottom: 5px;
+        border-bottom: 1px solid $color-background-l5;
+      }
+    }
+  }
+}

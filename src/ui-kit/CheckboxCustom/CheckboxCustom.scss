@@ -1,0 +1,81 @@
+@import '../../styles/vars';
+
+.CheckboxCustom {
+  display: flex;
+  align-content: center;
+  justify-content: start;
+  cursor: pointer;
+
+  /* *********************************
+  Радиокнопки
+  ********************************* */
+
+  label {
+    cursor: pointer;
+  }
+
+  /* *********************************
+  Чекбоксы
+  ********************************* */
+
+  .real-checkbox {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .custom-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: $color-white-l1;
+    border: 1px solid $color-tertiary-l3;
+    border-radius: 3px;
+    vertical-align: sub;
+    //margin-right: 5px;
+  }
+
+  .custom-checkbox::before {
+    content: '';
+
+    /* Рисуем галочку */
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-image: url('../../assets/svg/icons/Check.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    /* Выравниваем по центру */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    margin-top: 1px;
+    transition: 0.2s ease-in;
+  }
+
+  /*
+  Активируем фейковый / декоративный чекбокс
+  */
+
+  .real-checkbox:checked + .custom-checkbox {
+    background-color: $color-accent-primary;
+    border-color: $color-accent-primary;
+  }
+
+  .real-checkbox:checked + .custom-checkbox::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .Label {
+    margin-left: 10px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-primary-l1;
+  }
+}

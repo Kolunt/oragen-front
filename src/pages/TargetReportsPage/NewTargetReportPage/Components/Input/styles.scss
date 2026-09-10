@@ -1,0 +1,29 @@
+@import './src/styles/vars';
+.input {
+  min-height: 34px;
+  width: 100%;
+  display: block;
+  outline: none;
+  padding: 7px 16px;
+  font-size: 12px;
+  color: $color-primary-l1;
+  background-color: $color-white-l1;
+  border: 1px solid $color-background-l5;
+  border-radius: 6px;
+  outline: transparent;
+  transition: all 0.25s ease;
+
+  &:disabled {
+    background-color: $color-background-l7;
+  }
+
+  &::placeholder {
+    color: $color-tertiary-l3;
+  }
+  &.error {
+    border: 1px solid $color-negative;
+  }
+  &:focus {
+    outline: none;
+  }
+}

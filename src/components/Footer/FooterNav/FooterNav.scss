@@ -1,0 +1,30 @@
+@import '../../../styles/vars';
+
+.FooterNav {
+  display: flex;
+  color: $color-tertiary-l3;
+
+  @media (max-width: 440px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    padding: 0 15px;
+    border-right: 1px solid $color-tertiary-l3;
+    list-style: none;
+    font-size: 10px;
+    line-height: 14px;
+
+    @media (max-width: 440px) {
+      border-right: none;
+      padding: 0;
+      margin-bottom: 5px;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      border-right: none;
+    }
+  }
+}

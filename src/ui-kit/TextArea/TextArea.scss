@@ -1,0 +1,51 @@
+@import '../../styles/vars';
+
+.TextareaForm {
+  $this: &;
+  //width: 100%;
+  //max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  &__Textarea {
+    width: 100%;
+    display: block;
+    outline: none;
+    padding: 10px 16px;
+    font-size: 12px;
+    color: $color-primary-l1;
+    //background-color: $color-background-l8;
+    border: 1px solid $color-background-l5;
+    border-radius: 6px;
+    outline: transparent;
+    transition: all 0.25s ease;
+    resize: none;
+    overflow: hidden;
+    min-height: 63px;
+    max-height: 150px;
+    &::placeholder {
+      color: $color-tertiary-l3;
+    }
+  }
+
+  &__Error {
+    border: 1px solid $color-negative;
+  }
+
+  &__Label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-tertiary-l3;
+  }
+
+  .Error {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-negative;
+  }
+}

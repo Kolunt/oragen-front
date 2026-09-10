@@ -1,0 +1,309 @@
+{
+  "info": {
+    "_postman_id": "bc8d1abc-3eae-4ead-95f8-5a0e9e85c083",
+    "name": "janus",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "getPluginEndpoint_create",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [""],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const response = JSON.parse(responseBody);",
+              "pm.globals.set(\"janusSessionId\", response.data.id);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"janus\": \"create\",\n    \"transaction\": \"{{randomString}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}",
+          "host": ["{{url}}"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getPluginEndpoint_attach",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const response = JSON.parse(responseBody);",
+              "pm.globals.set(\"janusPluginId\", response.data.id);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"janus\": \"attach\",\n    \"plugin\": \"janus.plugin.videoroom\",\n    \"transaction\": \"{{randomString}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/{{janusSessionId}}",
+          "host": ["{{url}}"],
+          "path": ["{{janusSessionId}}"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createJanusRoom",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"janus\": \"message\",\n    \"body\": {\n        \"request\": \"create\",\n        \"permanent\": true,\n        \"secret\": \"roomwith19\",\n        \"room\": 8999999999999999999,\n        \"description\": \"room with id 19 digits\",\n        \"publishers\": 7\n    },\n    \"transaction\": \"{{randomString}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/{{janusSessionId}}/{{janusPluginId}}",
+          "host": ["{{url}}"],
+          "path": ["{{janusSessionId}}", "{{janusPluginId}}"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "destroyJanusRoom",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"janus\": \"message\",\n    \"body\": {\n        \"request\": \"destroy\",\n        \"permanent\": true,\n        \"secret\": \"roomwith19\",\n        \"room\": 8999999999999999999\n    },\n    \"transaction\": \"{{randomString}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/{{janusSessionId}}/{{janusPluginId}}",
+          "host": ["{{url}}"],
+          "path": ["{{janusSessionId}}", "{{janusPluginId}}"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listUnitRooms",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"janus\": \"message\",\n    \"body\": {\n        \"request\": \"list\"\n    },\n    \"transaction\": \"{{randomString}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/{{janusSessionId}}/{{janusPluginId}}",
+          "host": ["{{url}}"],
+          "path": ["{{janusSessionId}}", "{{janusPluginId}}"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "checkRoomExists",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"janus\": \"message\",\n    \"body\": {\n        \"request\": \"exists\",\n        \"room\": 21679929119\n    },\n    \"transaction\": \"{{randomString}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/{{janusSessionId}}/{{janusPluginId}}",
+          "host": ["{{url}}"],
+          "path": ["{{janusSessionId}}", "{{janusPluginId}}"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listRoomParticipants",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"janus\": \"message\",\n    \"body\": {\n        \"request\": \"listparticipants\",\n        \"room\": 1234\n    },\n    \"transaction\": \"{{randomString}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/{{janusSessionId}}/{{janusPluginId}}",
+          "host": ["{{url}}"],
+          "path": ["{{janusSessionId}}", "{{janusPluginId}}"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "kickParticipant",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"janus\": \"message\",\n    \"body\": {\n        \"request\": \"kick\",\n        \"room\": 1234,\n        \"secret\": \"adminpwd\",\n        \"id\": 2530164888017839\n    },\n    \"transaction\": \"{{randomString}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/{{janusSessionId}}/{{janusPluginId}}",
+          "host": ["{{url}}"],
+          "path": ["{{janusSessionId}}", "{{janusPluginId}}"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "",
+          "const length = 8;",
+          "const characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';",
+          "const charactersLength = characters.length;",
+          "",
+          "let result = '';",
+          "for(let i = 0; i < length; i++) {",
+          "    result += characters.charAt(Math.floor(Math.random() * charactersLength));",
+          "}",
+          "pm.globals.set(\"randomString\", result);"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "http://46.36.222.47:8088/janus",
+      "type": "default",
+      "disabled": true
+    },
+    {
+      "key": "url",
+      "value": "http://5.188.30.247:8088/janus",
+      "type": "default",
+      "disabled": true
+    },
+    {
+      "key": "url",
+      "value": "http://janusdev.oragen.ru:8088/janus",
+      "type": "default"
+    }
+  ]
+}

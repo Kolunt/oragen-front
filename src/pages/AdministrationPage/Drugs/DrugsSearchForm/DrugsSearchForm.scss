@@ -1,0 +1,58 @@
+@import './src/styles/vars';
+
+.DrugsSearchForm {
+  width: 100%;
+  max-width: 290px;
+
+  .Form {
+    margin-bottom: 20px;
+    max-width: 290px;
+    padding: 20px 26px;
+    background-color: $color-background-l8;
+    border-radius: 10px;
+
+    & > * {
+      margin-bottom: 20px;
+
+      @media (max-width: 1200px) {
+        margin-bottom: 0px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .SearchStyle {
+    @media (max-width: 1200px) {
+      margin-right: 10px;
+      width: 200px;
+    }
+  }
+
+  .ButtonReset {
+    width: 236px;
+    background-color: $color-background-l7;
+    color: $color-tertiary-l3;
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  .ButtonWrapper {
+    max-width: 290px;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+
+    .ButtonCreate {
+      width: 236px;
+      padding: 10px 0;
+    }
+  }
+}

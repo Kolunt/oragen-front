@@ -1,0 +1,35 @@
+@import '../../../../../../styles/vars';
+
+.ModalAddBrick {
+  width: 880px;
+  background-color: $color-white-l1;
+
+  .BrickOrganizationForm {
+    width: 100%;
+
+    .CustomSelect {
+      margin-bottom: 10px;
+      font-size: 13px;
+      font-weight: 600;
+
+      label {
+        font-size: 13px;
+        font-weight: 400;
+        color: $color-tertiary-l3;
+      }
+
+      .custom-select__control {
+        font-size: 13px !important;
+        background-color: $color-background-l8 !important;
+      }
+
+      .custom-select__placeholder {
+        font-weight: 400 !important;
+      }
+    }
+  }
+}
+
+.ModalWrapper {
+  background-color: $color-white-l1 !important;
+}

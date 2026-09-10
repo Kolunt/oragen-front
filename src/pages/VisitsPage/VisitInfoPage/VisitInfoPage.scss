@@ -1,0 +1,272 @@
+@import './src/styles/vars';
+
+.VisitInfoPage {
+  background-color: $color-background-l7;
+
+  .VisitInfoBlock {
+    width: 100%;
+    //max-width: 1000px;
+    background-color: $color-background-l7;
+
+    .TableMedicines {
+      margin-bottom: 20px;
+      padding: 20px 30px 10px 30px;
+      background-color: $color-white-l1;
+      border-radius: 10px;
+      border: 1px solid $color-background-l5;
+
+      .Tabs {
+        width: fit-content;
+        margin-bottom: 12px;
+      }
+
+      .Table {
+        margin-bottom: 20px;
+        width: 100%;
+        //max-width: 850px;
+        //padding: 0px 15px;
+        background-color: $color-white-l1;
+        border-collapse: collapse;
+        //border-spacing: 0 20px;
+        thead {
+          background-color: $color-background-l8;
+
+          th {
+            padding: 8px 0;
+            color: $color-primary-l1;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 14px;
+            text-align: center;
+          }
+        }
+
+        tbody {
+          td {
+            padding: 8px 0;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 14px;
+            text-align: center;
+            color: $color-secondary-l2;
+            border-right: 1px solid $color-background-l8;
+
+            .Checkbox {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+
+    .Table {
+      padding: 20px 30px;
+      background-color: $color-white-l1;
+      border-radius: 10px;
+
+      .TableRow {
+        padding: 8px 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.3fr;
+        font-size: 12px;
+        color: $color-primary-l1;
+        border-radius: 10px;
+
+        &:last-child {
+          border: none;
+        }
+
+        &__Main {
+          background-color: $color-background-l8;
+        }
+
+        .Cell {
+          display: flex;
+          justify-content: center;
+          border-right: 2px solid $color-background-l8;
+        }
+      }
+    }
+  }
+
+  .VisitCard {
+    height: 100%;
+    width: 100%;
+    max-width: 264px;
+    background-color: $color-white-l1;
+    border: $color-white-l1;
+    border-radius: 10px;
+
+    &__Header {
+      padding: 16px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-accent-primary;
+      color: $color-white-l1;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 16px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+
+    &__Main {
+      padding: 16px 16px 10px 16px;
+
+      .List {
+        padding: 0;
+        margin-bottom: 30px;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 14px;
+        color: $color-primary-l1;
+
+        &__Item {
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        span:first-child {
+          margin-right: 5px;
+          color: $color-tertiary-l3;
+        }
+
+        span:last-child {
+          color: $color-primary-l1;
+        }
+
+        .ItemCheckBox {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          span {
+            margin: 0;
+          }
+        }
+      }
+
+      .ButtonVisit {
+        width: 100%;
+        padding: 10px 0px;
+        font-weight: 600;
+        color: $color-tertiary-l3;
+        background-color: $color-background-l7;
+      }
+    }
+
+    &__Footer {
+      padding: 0px 16px 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0 10px;
+
+      .VisitDetails {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-background-l7;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .ButtonStart {
+        width: 100%;
+        padding: 10px;
+
+        span {
+          margin-right: 6px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .Details {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-background-l7;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .HistoryVisits {
+    width: 100%;
+    padding: 20px;
+    background-color: $color-background-l8;
+    border-radius: 10px;
+    border: 1px solid $color-background-l5;
+
+    .HistoryVisitsSorting {
+      margin-bottom: 10px;
+      padding: 0 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr 0.5fr;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 14px;
+      color: $color-secondary-l2;
+
+      &__Item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__Item--Start {
+        justify-content: start;
+      }
+    }
+
+    .List {
+      .ListItemVisits {
+        padding: 12px 10px;
+        margin-bottom: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr 0.5fr;
+        background-color: $color-white-l1;
+        border-radius: 6px;
+        line-height: 14px;
+        color: $color-primary-l1;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .Cell {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 12px;
+          line-height: 14px;
+          color: $color-secondary-l2;
+          text-align: center;
+
+          &--Start {
+            justify-content: flex-start;
+          }
+
+          .CustomIcon {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

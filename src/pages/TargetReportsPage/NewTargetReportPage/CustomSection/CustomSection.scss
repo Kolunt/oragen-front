@@ -1,0 +1,199 @@
+@import './src/styles/vars';
+
+.CustomSection {
+  margin-bottom: 20px;
+  border-bottom: 1px solid $color-positive;
+
+  &__Header {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+
+    .CustomInput {
+      width: 100%;
+
+      label {
+        font-size: 12px;
+      }
+
+      input {
+        padding: 7px 16px;
+        background-color: $color-background-l7;
+        color: $color-black-l2;
+        border-color: transparent;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    }
+
+    .CustomIcon {
+      margin-top: 16px;
+    }
+  }
+
+  .IconWrapper {
+    flex-shrink: 0;
+    cursor: pointer;
+    svg {
+      path {
+        stroke: $color-accent-primary;
+      }
+    }
+  }
+
+  .AddItem {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+
+    .Title {
+      font-size: 13px;
+      line-height: 16px;
+      color: $color-secondary-l2;
+    }
+
+    .CustomIcon {
+      margin-left: -2px;
+      cursor: pointer;
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+
+  .FileUpload {
+    width: 100%;
+
+    &__Label {
+      display: flex;
+      gap: 0 5px;
+      margin-bottom: 3px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+
+      .Text {
+        color: $color-tertiary-l3;
+      }
+
+      .ResetButtonStyle {
+        padding: 0;
+        margin: 0;
+        color: $color-accent-primary;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+
+    &__Content {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 0 20px;
+
+      .Dropzone {
+        padding: 10px;
+        width: 100%;
+        min-height: 42px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        gap: 0 10px;
+        border: 1px dashed $color-secondary-l2;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+        color: $color-black-l2;
+
+        .UploadedFilesItem {
+          display: flex;
+          align-items: center;
+          gap: 0 5px;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 18px;
+          color: $color-secondary-l2;
+
+          .CustomIconDelete {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+
+            svg {
+              path {
+                fill: $color-negative;
+              }
+            }
+          }
+        }
+      }
+
+      .Text {
+        color: $color-secondary-l2;
+      }
+    }
+
+    &__ButtonActions {
+      .ButtonClearAll {
+        padding: 5px 10px;
+        color: $color-white-l1;
+        background-color: $color-secondary-l2;
+        border: none;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 400;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .Row {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+
+    .TextAreaWrapper {
+      width: 100%;
+
+      .InputField {
+        width: 100%;
+        height: 60px;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid $color-background-l5;
+        resize: none;
+        outline: none;
+        font-size: 13px;
+        background-color: $color-background-l8;
+      }
+
+      .Error {
+        border: 1px solid $color-negative;
+      }
+
+      .TextError {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 14px;
+        color: $color-negative;
+      }
+    }
+  }
+
+  .CustomTextArea {
+    .TextareaForm__Label {
+      font-size: 12px;
+    }
+  }
+}

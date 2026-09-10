@@ -1,0 +1,33 @@
+@import '../../../../../styles/vars';
+
+.ListItemReportPage {
+  padding: 12px 20px;
+  margin-bottom: 5px;
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 30px;
+  background-color: $color-white-l1;
+  border-radius: 6px;
+  cursor: pointer;
+
+  @media (max-width: 1200px) {
+    padding: 10px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .Cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 17px;
+    color: $color-black-l2;
+
+    &--Start {
+      justify-content: flex-start;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.VideoMe {
+  position: relative;
+  z-index: 10;
+
+  .CustomVideo {
+    width: 100%;
+    max-width: 300px;
+    height: 215px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  &__Image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .Hidden {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,85 @@
+@import './src/styles/vars';
+
+.SelectForm {
+  padding-top: 18px;
+  position: relative;
+
+  &__Label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 10px;
+    line-height: 14px;
+    color: $color-grey-l3;
+  }
+
+  .custom-select {
+    &__control {
+      font-size: 12px !important;
+      color: $color-black-l2 !important;
+      background-color: $color-white-l1 !important;
+      border: 1px solid $color-background-l5 !important;
+      border-radius: 6px !important;
+      box-shadow: none !important;
+      cursor: pointer !important;
+
+      &--menu-is-open {
+        border: 1px solid $color-background-l5 !important;
+      }
+    }
+
+    &__placeholder {
+      color: $color-tertiary-l3 !important;
+    }
+
+    &__menu {
+      padding: 10px !important;
+      border: none !important;
+      z-index: 5 !important;
+    }
+
+    &__menu-list {
+      border: none !important;
+    }
+
+    &__option {
+      cursor: pointer !important;
+      font-size: 12px !important;
+      background-color: transparent !important;
+      color: $color-black-l2 !important;
+      //text-align: center !important;
+      //border: none !important;
+
+      //&--is-active {
+      //  background-color: $color-background-l6 !important;
+      //}
+
+      &--is-focused {
+        background-color: $color-background-l6 !important;
+      }
+    }
+
+    &__indicator-separator {
+      display: none !important;
+    }
+  }
+
+  &__Error .custom-select {
+    &__control {
+      border: 1px solid $color-negative !important;
+    }
+  }
+
+  .TextError {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $color-negative;
+  }
+}
+
+.close-for-input {
+  position: absolute;
+  right: 35px;
+  top: 30px;
+}

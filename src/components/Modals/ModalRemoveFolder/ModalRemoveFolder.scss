@@ -1,0 +1,15 @@
+@import './src/styles/vars';
+
+.ModalRemoveFolder {
+  width: 200px;
+  background-color: $color-background-l8;
+
+  &__Header {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    color: $color-primary-l1;
+  }
+}

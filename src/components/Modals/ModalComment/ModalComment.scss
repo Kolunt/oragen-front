@@ -1,0 +1,36 @@
+@import './src/styles/vars';
+
+.ModalComment {
+  width: 350px;
+  min-height: 100px;
+  background-color: $color-background-l8;
+
+  .Comment {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid $color-background-l5;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__Author {
+      font-size: 13px;
+      font-weight: 600;
+      color: $color-positive;
+    }
+
+    &__Date {
+      font-size: 12px;
+      font-weight: 600;
+      color: $color-secondary-l2;
+    }
+
+    &__Text {
+      font-size: 13px;
+      font-weight: 600;
+      color: $color-black-l2;
+    }
+  }
+}

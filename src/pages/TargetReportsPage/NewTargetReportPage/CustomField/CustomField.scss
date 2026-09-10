@@ -1,0 +1,61 @@
+@import './src/styles/vars';
+
+.CustomField {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 0 20px;
+  margin-bottom: 10px;
+
+  .RowItem {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+
+    .CustomInput {
+      width: 100%;
+      input {
+        margin-bottom: 0;
+      }
+    }
+
+    .CustomCheckbox {
+      .custom-checkbox {
+        border-width: 2px;
+        width: 20px;
+        height: 20px;
+        &:before {
+          width: 20px;
+          height: 16px;
+        }
+      }
+    }
+
+    .CustomCheckboxRound {
+      .custom-radio {
+        border: 2px solid $color-secondary-l2;
+        width: 20px;
+        height: 20px;
+
+        &:before {
+          width: 9px;
+          height: 9px;
+          background-color: $color-accent-primary;
+        }
+      }
+
+      .real-radio:checked + .custom-radio {
+        background-color: $color-white-l1;
+        border: 2px solid $color-accent-primary;
+      }
+    }
+
+    .CustomIcon {
+      cursor: pointer;
+      svg {
+        path {
+          stroke: $color-accent-primary;
+        }
+      }
+    }
+  }
+}
